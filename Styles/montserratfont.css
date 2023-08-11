@@ -1,0 +1,28 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../Assets/Fonts/Montserrat-Regular.otf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../Assets/Fonts/Montserrat-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../Assets/Fonts/Montserrat-Thin.otf);
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../Assets/Fonts/Montserrat-Italic.otf);
+    font-weight: italic;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../Assets/Fonts/Montserrat-BoldItalic.otf);
+    font-weight: bolditalic;
+}

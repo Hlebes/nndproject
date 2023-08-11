@@ -1,0 +1,325 @@
+body, html {
+    margin: 0;
+    background-color: rgb(38, 18, 56);
+}
+
+.menupanel {
+    width: 100%;
+    height: 13vh;
+    background-color: rgb(11, 6, 17);
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
+    z-index: 99999;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 95vw;
+}
+
+.lowwrapper{
+    margin: 0 auto;
+    max-width: 85vw;
+}
+
+.navpanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    
+}
+
+#topmenulogoimg {
+    width: 10vh;
+    height: 100%;
+}
+
+#topmenulogoimg img {
+    height: 6vh;
+}
+
+#topmenulogo {
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    font-family: montserrat;
+    font-size: 2vh;
+}
+
+#topmenulogo H2{
+    margin-left: 1vw;
+    color: white;
+}
+
+#topmenulogo .dropdown {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    background-color: aliceblue;
+}
+
+#topmenu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    font-family: montserrat;
+    font-weight: bolditalic;
+}
+
+#topmenu :last-child {
+    margin-right: 0px;
+}
+
+.topmenubtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 10vw;
+    color:aliceblue;
+    height: 100%;
+    position: relative;
+    margin-right: 1vw;
+    transition: .5s;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 2vh;
+}
+
+.hoverline {
+    position: absolute;
+    bottom: 0px;
+    width: 0px;
+    height: .5vh;
+    background-color: blueviolet;
+    transition: .5s;
+    opacity: .2;
+}
+
+.topmenubtn:hover .hoverline{
+    width: 100%;
+    opacity: 1;
+}
+
+.topmenubtn:hover {
+    color:blueviolet;
+}
+
+#topauth {
+    height: 9vh;
+    width: 9vh;
+    border-radius: 4.5vh;
+    background-color: blueviolet;
+}
+
+#authmenu {
+    width: 30vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#authmenu h3{
+    color:aliceblue;
+    font-family: montserrat;
+    font-weight: bolditalic;
+    font-size: 2.5vh;
+    line-height: 4vh;
+    margin-right: 3vh;
+}
+
+.page {
+    margin-top: 13vh;
+    width: 100%;
+    min-height: 1500px;
+    background-color: rgb(38, 18, 56);
+}
+
+.mainseries {
+    height: 87vh;
+    background-color: bisque;
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
+    margin-bottom: 5vh;
+}
+
+.contentbox {
+    position: relative;
+    width: 70vw;
+    background-color: brown;
+}
+
+.thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('..Assets\\Pictures\\Thumbnails\\CBB_thumb.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.contentbox:hover .thumbnail {
+    opacity: 0;
+}
+
+.maintrailer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width:30vw;
+    background-color: rgb(11, 6, 17);
+}
+
+.description .logobox{
+    width: 80%;
+}
+
+.description .textbox{
+    width: 80%;
+}
+
+.description a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 6vh;
+    border-radius: 6vh;
+    margin-bottom: 10vh;
+    background-color: aliceblue;
+    color: black;
+    transition: .3s;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: montserrat;
+    font-weight: bold;
+}
+
+.description a:hover{
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+
+.logobox {
+    margin-top: 5vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logobox img {
+    max-width: 80%;
+}
+
+.logobox h5{
+    color: white;
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.textbox {
+    color:white;
+    line-break: normal;
+    text-align: justify;
+    font-family: montserrat;
+    font-weight: thin;
+    font-size: 2vh;
+}
+
+.addseries {
+    min-height: 400px;
+}
+
+.series {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(11, 6, 17);
+    border-radius: 7.5vh;
+    font-family: montserrat;
+    margin-bottom: 4vh;
+}
+
+.seriesname {
+    color: aliceblue;
+    margin: 0px;
+    margin-bottom: 0px;
+    font-size: 5vh;
+}
+
+.orig {
+    margin-bottom: 1vh;
+    font-size: 3vh;
+}
+
+.year {
+    color: aliceblue;
+    margin: 0px;
+    margin-bottom: 1.5vh;
+    font-size: 3vh;
+}
+
+.series .desc {
+    left: 27.5vw;
+    position: absolute;
+    width: 56vw;
+    height: 27vh;
+    top: 2vh;
+}
+
+.desctext {
+    color: white;
+    line-break: normal;
+    text-align: justify;
+    font-family: montserrat;
+    font-weight: thin;
+    font-size: 1.7vh;
+}
+
+.seriespage{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66%;
+    height: 6vh;
+    border-radius: 1vh 1vh 12vh 1vh;
+    background-color: aliceblue;
+    color: black;
+    transition: .3s;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: montserrat;
+    font-weight: bold;
+    bottom: 3vh;
+    left: 27.5vw;
+}
+
+.seriespage:hover{
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
