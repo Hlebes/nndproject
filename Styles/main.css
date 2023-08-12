@@ -4,6 +4,8 @@ body, html {
     font-family: montserrat;
 }
 
+a {text-decoration: none;}
+
 .menupanel {
     width: 100%;
     height: 13vh;
