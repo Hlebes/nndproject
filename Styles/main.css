@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     background-color: rgb(38, 18, 56);
+    font-family: montserrat;
 }
 
 .menupanel {
