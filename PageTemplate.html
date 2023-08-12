@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="..\Main\Styles\main.css" />
+        <link rel="stylesheet" type="text/css" href="..\Main\Styles\seriespage.css" />
+        <link rel="stylesheet" type="text/css" href="..\Main\Styles\montserratfont.css" />
+    </head>
+    <body>
+        <div class="menupanel">
+            <div class="wrapper navpanel">
+                <div id="topmenulogo">
+                    <div id="topmenulogoimg">
+                        <img src="..\Main\Assets\Pictures\Logos\ND.png">
+                    </div>
+                    <H2>NoNameDUB<br>Project</H2>
+                </div>
+                <div id="topmenu">
+                    <div class="topmenubtn">
+                        <label>Смотреть</label>
+                        <div class="hoverline"></div>
+                    </div>
+                    <div class="topmenubtn">
+                        <label>Закладки</label>
+                        <div class="hoverline"></div>
+                    </div>
+                    <div class="topmenubtn">
+                        <label>История</label>
+                        <div class="hoverline"></div>
+                    </div>
+                </div>
+                <div id="authmenu">
+                    <div id="topauth">
+                    </div>
+                    <h3>Nickname</h3>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="view">
+                <iframe class="videoplayer" src="https://anivod.com/uv/474419/aba86617abff8de5d640/720p" frameborder="0" allowfullscreen></iframe>
+                <script>
+                    let player = document.getElementsByClassName('videoplayer')[0];
+                    player.getElementsByClassName('movie-panel')[0].style.display = "none";
+                </script>
+                <div class="episodeselect">
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>1 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/419994/e65e962e3d8f1c28dd35/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>2 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/427528/74985e5e3743b22fcded/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>3 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/429966/e708fe9b9745b4db04db/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>4 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/432129/4ffdaaebd5ce4d1d29d4/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>5 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/432901/9af39579ce8eda797838/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>6 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/435385/735fdbcc95759268f800/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>7 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/438824/c0b1f88570b871080c91/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>8 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/443004/d63348e1fc46b8f50f18/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>9 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/447151/7273ad5826fb8c5b1d4d/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>10 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/455437/737c2ce06900c7f21aa1/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>11 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/458206/6a8c247daef6d3ab0a2f/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>12 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/462177/06eba1a6f93322a7c732/720p</label>
+                    </div>
+                    <div class="episode" onclick="SwitchEp(this)">
+                        <label>13 Серия</label>
+                        <label class="ep_page">https://anivod.com/uv/474419/aba86617abff8de5d640/720p</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="..\Main\Scripts\pickep.js"></script>
+</html>

@@ -1,0 +1,83 @@
+.view {
+    height: 87vh;
+    background-color: bisque;
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
+    margin-bottom: 5vh;
+}
+
+.adsbox {
+    display: none !important;
+}
+
+.addsDiv {
+    display: none;
+}
+
+.rb-adman-ad-actions {
+    display: none !important;
+}
+
+.mol-video-ad-container {
+    display: none !important;
+}
+
+.trg-v-multi__wrap.js-wrap._started {
+    display: none !important;
+}
+
+.adv-player.loading.not-ios.vpaid.active.adv-complete {
+    display: none !important;
+}
+
+.videoplayer {
+    height: 100%;
+    width: 80vw;
+}
+
+.episodeselect {
+    width: 20vw;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: rgb(11, 6, 17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.episodeselect::-webkit-scrollbar {
+    display: none;
+}
+
+.episode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    padding: 2vh 2vw;
+    background-color: rgb(220, 220, 220);
+    color:rgb(11, 6, 17);
+    height: 10vh;
+    width: 15vw;
+    font-size: 4vh;
+    margin-bottom: 1vh;
+    transition: .2s;
+}
+
+.episode:hover {
+    cursor: pointer;
+    background-color: rgb(101, 89, 116);
+}
+
+.episode:hover label {
+    cursor: pointer;
+}
+
+.ep_page {display: none;}
+
+.movie-panel {
+    display: none !important;
+}
