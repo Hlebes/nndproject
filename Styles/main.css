@@ -17,6 +17,16 @@ a {text-decoration: none;}
     z-index: 99999;
 }
 
+#authmenu label {
+    color:aliceblue;
+    font-family: montserrat;
+    font-weight: bolditalic;
+    font-size: 2.5vh;
+    line-height: 4vh;
+    margin: 2.5vh 0;
+    margin-right: 3vh;
+}
+
 .wrapper{
     margin: 0 auto;
     max-width: 95vw;
@@ -124,15 +134,6 @@ a {text-decoration: none;}
     width: 30vw;
     display: flex;
     flex-direction: row-reverse;
-}
-
-#authmenu h3{
-    color:aliceblue;
-    font-family: montserrat;
-    font-weight: bolditalic;
-    font-size: 2.5vh;
-    line-height: 4vh;
-    margin-right: 3vh;
 }
 
 .page {
