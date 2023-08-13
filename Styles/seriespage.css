@@ -5,31 +5,6 @@
     width: 100%;
     box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
     -webkit-box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
-    margin-bottom: 5vh;
-}
-
-.adsbox {
-    display: none !important;
-}
-
-.addsDiv {
-    display: none;
-}
-
-.rb-adman-ad-actions {
-    display: none !important;
-}
-
-.mol-video-ad-container {
-    display: none !important;
-}
-
-.trg-v-multi__wrap.js-wrap._started {
-    display: none !important;
-}
-
-.adv-player.loading.not-ios.vpaid.active.adv-complete {
-    display: none !important;
 }
 
 .videoplayer {
@@ -80,4 +55,96 @@
 
 .movie-panel {
     display: none !important;
+}
+
+.serieslending {
+    height: 77vh;
+    width: 94vw;
+    backdrop-filter: blur;
+    background-color: rgb(28, 14, 41);
+    padding: 5vh;
+    position: relative;
+    display: flex;
+    color: aliceblue;
+}
+
+H1, H2, H3, H4, H5, H6 {
+    margin: 0px;
+}
+
+.seriestitle {
+    font-size: 6vh;
+    font-weight: bolditalic;
+}
+
+.seriesorigtitle {
+    font-size: 4vh;
+}
+
+.seriesyear {
+    font-size: 3vh;
+}
+
+.seriesposter {
+    margin-left: -5vh;
+    margin-top: -5vh;
+    margin-bottom: -5vh;
+    margin-right: 5vh;
+    height: 87vh;
+}
+
+.generalinfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.studioslogos {
+    display: flex;
+    width: 50%;
+    align-content: normal;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.studioslogos img {
+    height: 5vh;
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+}
+
+.infotitle {
+    width: 50%;
+}
+
+.desctext {
+    font-size: 2vh;
+    margin-bottom: 3vh;
+}
+
+.staff {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 2.5vh;
+}
+
+.staffdiv {
+    display: flex;
+    margin-right: 3vh;
+    margin-bottom: 2vh;
+}
+
+.workprogress {
+    position: absolute;
+    display: flex;
+    font-size: 6vh;
+    bottom: 0vh;
+    right: 0vh;
+}
+
+.seriesdescription {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
