@@ -213,6 +213,16 @@ a {text-decoration: none;}
     font-weight: bold;
 }
 
+.series .pic4 {
+    margin-left: 1.5vw;
+    height: 35vh;
+    width: 25vw;
+    border-radius: 6vh 1vh 1vh 6vh;
+    background-position: center;
+    background-size: cover;
+    transition: .2s;
+}
+
 .description a:hover{
     background-color: blueviolet;
     color: white;
