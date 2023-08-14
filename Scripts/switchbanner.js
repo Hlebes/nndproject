@@ -4,7 +4,7 @@ function SwitchBanner(el) {
     let logo = el.children[1].innerHTML;
     let desc = el.children[2].innerHTML;
     let linkto = el.children[3].innerHTML;
-    console.log(thumb, logo, desc, linkto);
+    console.log(document.getElementById(series2));
     setTimeout(function() {
         document.getElementById(series2).getElementsByClassName(bgcontent)[0].style.backgroundImage = thumb;
         document.getElementsByClassName(series2desc)[0].getElementsByTagName(a)[0].href = linkto;
