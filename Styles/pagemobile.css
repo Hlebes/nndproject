@@ -1,0 +1,6 @@
+@media (orientation: portrait) {
+    .videoplayer {
+        width: 100vw;
+        height: 30vh;
+    }
+}
