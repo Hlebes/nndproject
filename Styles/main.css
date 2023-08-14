@@ -141,13 +141,13 @@ a {text-decoration: none;}
 }
 
 .mainseries {
-    height: 87vh;
+    height: 82vh;
     background-color: bisque;
     display: flex;
     width: 100%;
     box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
     -webkit-box-shadow: 0px 15px 21px -12px rgba(0, 0, 0, 0.36);
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 .contentbox {
@@ -201,14 +201,14 @@ a {text-decoration: none;}
     justify-content: center;
     width: 50%;
     height: 6vh;
-    border-radius: 6vh;
+    border-radius: 1vh;
     margin-bottom: 10vh;
     background-color: aliceblue;
     color: black;
     transition: .3s;
     font-size: 1.2vw;
     font-weight: bold;
-    font-family: montserrat;
+    font-family: montserratbold;
     font-weight: bold;
 }
 
@@ -243,8 +243,7 @@ a {text-decoration: none;}
 
 .logobox h5{
     color: white;
-    font-family: montserrat;
-    font-weight: bold;
+    font-family: montserratbold;
     font-size: 2vh;
     text-align: center;
 }
@@ -288,7 +287,7 @@ a {text-decoration: none;}
     background-color: rgb(11, 6, 17);
     border-radius: 2.5vh;
     font-family: montserrat;
-    margin-bottom: 4vh;
+    margin-bottom: 3vh;
 }
 
 .seriesname {
