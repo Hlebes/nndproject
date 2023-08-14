@@ -1,11 +1,10 @@
 function SwitchBanner(el) {
-    console.log(el);
+    document.getElementById("viewcover").style.opacity = 1;
     let thumb = el.children[0].innerHTML;
     let logo = el.children[1].innerHTML;
     let desc = el.children[2].innerHTML;
     let linkto = el.children[3].innerHTML;
     console.log(document.getElementById("series2"));
-    document.getElementById("viewcover").style.opacity = 1;
     setTimeout(function() {
         document.getElementById("series2").getElementsByClassName("bgcontent")[0].style = "background-image: url('" + thumb + "');";
         document.getElementsByClassName("series2desc")[0].getElementsByTagName("a")[0].href = linkto;
