@@ -354,3 +354,37 @@ a {text-decoration: none;}
     color: white;
     cursor: pointer;
 }
+
+.series2 {
+    position: relative;
+    z-index: 10;
+    border-radius: 1vw;
+    overflow: hidden;
+    background-color: azure;
+    border: 1vh solid rgb(11, 6, 17);
+    width: 95vw;
+    height: 70vh;
+}
+
+.bggradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(left, rgba(11,6,17,1) 0%, rgba(11,6,17,1) 42%, rgba(11,6,17,0) 58%, rgba(11,6,17,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(11,6,17,1) 0%,rgba(11,6,17,1) 42%,rgba(11,6,17,0) 58%,rgba(11,6,17,0) 100%);
+    background: linear-gradient(to right, rgba(11,6,17,1) 0%,rgba(11,6,17,1) 42%,rgba(11,6,17,0) 58%,rgba(11,6,17,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b0611', endColorstr='#000b0611',GradientType=1 );
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.bgcontent {
+    position: absolute;
+    height: 100%;
+    width: 54vw;
+    z-index: 1;
+    right: 0px;
+    background-position: center;
+    background-size: cover;
+}
