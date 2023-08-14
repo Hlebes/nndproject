@@ -93,7 +93,7 @@ a {text-decoration: none;}
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 6vw;
+    min-width: 10vw;
     color:aliceblue;
     height: 100%;
     position: relative;

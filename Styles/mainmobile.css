@@ -9,6 +9,7 @@
 
     .mainseries {
         flex-direction: column;
+        height: 94vh;
     }
 
     .contentbox {
@@ -34,5 +35,13 @@
         width: 4vh;
         border-radius: 2vh;
         background-color: blueviolet;
+    }
+
+    .hoverline {
+        height: .25vh;
+    }
+
+    .page {
+        margin-top: 6vh;
     }
 }
