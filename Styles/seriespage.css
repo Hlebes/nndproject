@@ -40,6 +40,7 @@
     font-size: 4vh;
     margin-bottom: 1vh;
     transition: .2s;
+    font-weight: bold;
 }
 
 .episode:hover {
