@@ -1,9 +1,9 @@
 function SwitchBanner(el) {
     console.log(el);
-    let thumb = el.getElementsByTagName(label)[0].innerHTML;
-    let logo = el.getElementsByTagName(label)[1].innerHTML;
-    let desc = el.getElementsByTagName(label)[2].innerHTML;
-    let linkto = el.getElementsByTagName(label)[3].innerHTML;
+    let thumb = el.children[0].innerHTML;
+    let logo = el.children[1].innerHTML;
+    let desc = el.children[2].innerHTML;
+    let linkto = el.children[3].innerHTML;
     setTimeout(function() {
         document.getElementsByClassName(series2)[0].getElementsByClassName(bgcontent)[0].style.backgroundImage = thumb;
         document.getElementsByClassName(series2desc)[0].getElementsByTagName(a)[0].href = linkto;
