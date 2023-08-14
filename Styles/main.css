@@ -414,5 +414,6 @@ a {text-decoration: none;}
     text-align: left;
     font-family: 'montserrat';
     font-size: 2vh;
+    width: 27vw;
     max-height: 42vh;
 }
