@@ -391,6 +391,7 @@ a {text-decoration: none;}
 }
 
 .series2desc {
+    align-items: flex-start;
     width: 33vw;
     padding: 5vh;
     height: 50vh;
