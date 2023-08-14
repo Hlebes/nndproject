@@ -1,11 +1,11 @@
 @media (orientation: portrait) {
     .videoplayer {
         width: 100vw;
-        height: 30vh;
+        height: 35vh;
     }
     .view {
         flex-direction: column;
-        height: 100vh;
+        height: 94vh;
     }
 
     .serieslending {
@@ -17,5 +17,10 @@
     .seriesposter {
         width: 100vw;
         height: unset;
+    }
+
+    .episodeselect {
+        width: 100vw;
+        height: 59vh;
     }
 }
