@@ -6,11 +6,11 @@ function SwitchBanner(el) {
     let linkto = el.children[3].innerHTML;
     console.log(document.getElementById("series2"));
     setTimeout(function() {
-        document.getElementById("series2").getElementsByClassName(bgcontent)[0].style.backgroundImage = thumb;
-        document.getElementsByClassName("series2desc")[0].getElementsByTagName(a)[0].href = linkto;
-        document.getElementsByClassName("series2desc")[0].getElementsByClassName(series2logo)[0].src = logo;
-        document.getElementsByClassName("series2desc")[0].getElementsByClassName(series2desctext)[0].innerHTML = desc;
-        document.getElementsByClassName("series2desc")[0].getElementsByClassName(link)[0].href = linkto;
+        document.getElementById("series2").getElementsByClassName("bgcontent")[0].style.backgroundImage = thumb;
+        document.getElementsByClassName("series2desc")[0].getElementsByTagName("a")[0].href = linkto;
+        document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2logo")[0].src = logo;
+        document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
+        document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
     }, 40)
     document.getElementById("viewcover").style.opacity = 1;
     setTimeout(function() {
