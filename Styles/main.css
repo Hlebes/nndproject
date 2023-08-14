@@ -451,4 +451,5 @@ a.link:hover{
     transition: .2s;
     opacity: 0;
     z-index: 9999;
+    pointer-events: none;
 }
