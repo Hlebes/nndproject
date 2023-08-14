@@ -5,6 +5,7 @@ function SwitchBanner(el) {
     let desc = el.children[2].innerHTML;
     let linkto = el.children[3].innerHTML;
     console.log(document.getElementById("series2"));
+    document.getElementById("viewcover").style.opacity = 1;
     setTimeout(function() {
         document.getElementById("series2").getElementsByClassName("bgcontent")[0].style = "background-image: url('" + thumb + "');";
         document.getElementsByClassName("series2desc")[0].getElementsByTagName("a")[0].href = linkto;
@@ -12,9 +13,8 @@ function SwitchBanner(el) {
         console.log("url('" + thumb + "');");
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
-    }, 200)
-    document.getElementById("viewcover").style.opacity = 1;
+    }, 300)
     setTimeout(function() {
         document.getElementById("viewcover").style.opacity = 0;
-    }, 150)
+    }, 200)
 }
