@@ -363,7 +363,7 @@ a {text-decoration: none;}
     background-color: rgb(11, 6, 17);
     border: 1vh solid rgb(11, 6, 17);
     width: 95vw;
-    height: 70vh;
+    height: 60vh;
     margin-bottom: 3vh;
 }
 
@@ -388,4 +388,10 @@ a {text-decoration: none;}
     right: 0px;
     background-position: center;
     background-size: cover;
+}
+
+.series2desc {
+    width: 30vw;
+    height: 50vh;
+    background-color: aliceblue;
 }
