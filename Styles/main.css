@@ -417,3 +417,20 @@ a {text-decoration: none;}
     width: 27vw;
     max-height: 42vh;
 }
+
+a.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 6vh;
+    border-radius: 1vh;
+    margin-bottom: 10vh;
+    background-color: aliceblue;
+    color: black;
+    transition: .3s;
+    font-size: 1.2vw;
+    font-weight: bold;
+    font-family: montserratbold;
+    font-weight: bold;
+}
