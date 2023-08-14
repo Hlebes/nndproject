@@ -49,4 +49,17 @@
     .page {
         margin-top: 6vh;
     }
+
+    .logobox h5 {
+        font-size: 1.5vh;
+    }
+
+    .textbox {
+        font-size: 1.5vh;
+    }
+
+    .description a {
+        margin-bottom: 3vh;
+        font-size: 2vh;
+    }
 }
