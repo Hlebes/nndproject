@@ -19,8 +19,7 @@ a {text-decoration: none;}
 
 #authmenu label {
     color:aliceblue;
-    font-family: montserrat;
-    font-weight: bolditalic;
+    font-family: montserratbolditalic;
     font-size: 2.5vh;
     line-height: 4vh;
     margin: 2.5vh 0;
@@ -81,8 +80,7 @@ a {text-decoration: none;}
     align-items: center;
     justify-content: center;
     width: 40vw;
-    font-family: montserrat;
-    font-weight: bolditalic;
+    font-family: montserratbolditalic;
 }
 
 #topmenu :last-child {
