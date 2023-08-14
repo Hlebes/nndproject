@@ -71,12 +71,12 @@
             <div class="wrapper addseries">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="..\Assets\Pictures\Thumbnails\CSM_thumb.jpg"></div>
-                      <div class="swiper-slide"><img src="..\Assets\Pictures\Thumbnails\TriSt_thumb.jpg"></div>
-                      <div class="swiper-slide"><img src="..\Assets\Pictures\Thumbnails\Tekken_thumb.jpg"></div>
-                      <div class="swiper-slide"><img src="..\Assets\Pictures\Thumbnails\KenAsh_thumb.jpg"></div>
-                      <div class="swiper-slide"><img src="..\Assets\Pictures\Thumbnails\NNKX.jpg"></div>
-                      <div class="swiper-slide"><img src="..\Assets\Pictures\Thumbnails\rec.jpeg"></div>
+                      <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Thumbnails\\CSM.webp</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\CSM.png</label><label class="bannerinfo series2desctext">Мальчик, потерявший всё, обретает силу демона и прорывает путь к своему счастью.</label><label class="bannerinfo link">CSM.html</label><img src="..\Assets\Pictures\Thumbnails\CSM_thumb.jpg"></div>
+                      <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Thumbnails\\CSM.webp</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\CSM.png</label><label class="bannerinfo series2desctext">Двое репортёров оказываются на ничейной земле, и встреча с преступником стоимостью 60 миллонов двойных долларов меняет их жизнь.</label><label class="bannerinfo link">TriSt.html</label><img src="..\Assets\Pictures\Thumbnails\CSM_thumb.jpg"><img src="..\Assets\Pictures\Thumbnails\TriSt_thumb.jpg"></div>
+                      <div class="swiper-slide" onclick="SwitchBanner(this)"><img src="..\Assets\Pictures\Thumbnails\Tekken_thumb.jpg"></div>
+                      <div class="swiper-slide" onclick="SwitchBanner(this)"><img src="..\Assets\Pictures\Thumbnails\KenAsh_thumb.jpg"></div>
+                      <div class="swiper-slide" onclick="SwitchBanner(this)"><img src="..\Assets\Pictures\Thumbnails\NNKX.jpg"></div>
+                      <div class="swiper-slide" onclick="SwitchBanner(this)"><img src="..\Assets\Pictures\Thumbnails\rec.jpeg"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -98,6 +98,7 @@
                         <label class="series2desctext">Мальчик, потерявший всё, обретает силу демона и прорывает путь к своему счастью.</label>
                         <a class="link" href="CSM.html">Смотреть онлайн</a>
                     </div>
+                    <div id="viewcover"></div>
                 </div>
                 <div class="series">
                     <div class="pic4 pic">
@@ -177,5 +178,6 @@
                 </div>
             </div>
         </div>
+        <script src="..\Scripts\switchbanner.js"></script>
     </body>
 </html>
