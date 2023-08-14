@@ -6,19 +6,19 @@
 @font-face {
     font-family: montserrat;
     src: url(../Assets/Fonts/Montserrat-Bold.otf);
-    font-weight: bold;
+    font-weight: boldd;
 }
 
 @font-face {
     font-family: montserrat;
     src: url(../Assets/Fonts/Montserrat-Thin.otf);
-    font-weight: thin;
+    font-weight: thinn;
 }
 
 @font-face {
     font-family: montserrat;
     src: url(../Assets/Fonts/Montserrat-Italic.otf);
-    font-weight: italic;
+    font-weight: italicc;
 }
 
 @font-face {
