@@ -3,6 +3,10 @@
         display: none;
     }
 
+    #topmenulogo H2 {
+        display: none;
+    }
+
     .mainseries {
         flex-direction: column;
     }
@@ -10,5 +14,9 @@
     .contentbox {
         width: 100vw;
         height: 50vh;
+    }
+
+    .menupanel {
+        height: 6vh; 
     }
 }
