@@ -2,4 +2,13 @@
     #authmenu label {
         display: none;
     }
+
+    .mainseries {
+        flex-direction: column;
+    }
+
+    .contentbox {
+        width: 100vw;
+        height: 50vh;
+    }
 }
