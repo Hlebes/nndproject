@@ -58,7 +58,7 @@ a {text-decoration: none;}
     display: flex;
     align-items: center;
     width: 30vw;
-    font-family: montserrat;
+    font-family: montserratbolditalic;
     font-size: 2vh;
 }
 
@@ -192,7 +192,7 @@ a {text-decoration: none;}
 
 .description .textbox{
     width: 80%;
-    font-family: montserratthin;
+    font-family: montserrat;
 }
 
 .description a{
@@ -292,6 +292,7 @@ a {text-decoration: none;}
 }
 
 .seriesname {
+    font-family: montserratbold;
     color: aliceblue;
     margin: 0px;
     margin-bottom: 0px;
@@ -319,14 +320,13 @@ a {text-decoration: none;}
 }
 
 .textbox {
-    font-weight: thinn;
+    font-weight: montserrat;
 }
 
 .desctext {
     color: white;
     line-break: normal;
     text-align: justify;
-    font-family: montserrat;
     font-weight: thin;
     font-size: 1.7vh;
 }
@@ -344,7 +344,7 @@ a {text-decoration: none;}
     transition: .3s;
     font-size: 2.5vh;
     font-weight: bold;
-    font-family: montserrat;
+    font-family: montserratbold;
     font-weight: bold;
     bottom: 2.5vh;
     left: 27.5vw;
