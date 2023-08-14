@@ -101,6 +101,11 @@
         overflow-y: scroll;
         max-height: 19vh;  
     }
+
+    .desctext::-webkit-scrollbar {
+        display: none;
+    }
+
     .seriespage {
         width: 91%;
         border-radius: 1vh 1vh 11vh 11vh;
