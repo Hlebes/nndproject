@@ -207,7 +207,7 @@ a {text-decoration: none;}
     background-color: aliceblue;
     color: black;
     transition: .3s;
-    font-size: 2.5vh;
+    font-size: 1.2vw;
     font-weight: bold;
     font-family: montserrat;
     font-weight: bold;
@@ -251,9 +251,8 @@ a {text-decoration: none;}
 }
 
 .desctext {
-    max-height: 11vh;
     overflow-y: scroll;
-    max-height: 19vh;  
+    max-height: 12vh;
 }
 
 .desctext::-webkit-scrollbar {
@@ -267,6 +266,12 @@ a {text-decoration: none;}
     font-family: montserrat;
     font-weight: thin;
     font-size: 2vh;
+    max-height: 42vh;
+    overflow-y: scroll;
+}
+
+.textbox::-webkit-scrollbar {
+    display: none;
 }
 
 .addseries {
