@@ -360,10 +360,11 @@ a {text-decoration: none;}
     z-index: 10;
     border-radius: 1vw;
     overflow: hidden;
-    background-color: azure;
+    background-color: rgb(11, 6, 17);
     border: 1vh solid rgb(11, 6, 17);
-    width: 85vw;
+    width: 95vw;
     height: 70vh;
+    margin-bottom: 3vh;
 }
 
 .bggradient {
@@ -382,7 +383,7 @@ a {text-decoration: none;}
 .bgcontent {
     position: absolute;
     height: 100%;
-    width: 54vw;
+    width: 55vw;
     z-index: 1;
     right: 0px;
     background-position: center;
