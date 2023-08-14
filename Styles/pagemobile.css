@@ -36,9 +36,51 @@
 
     .infotitle {
         width: 100%;
+        margin-bottom: 2vh;
     }
 
     .studioslogos {
         width: 100%;
+        justify-content: center;
+    }
+
+    .seriestitle {
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    .seriesorigtitle {
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    .seriesyear {
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    .studioslogos img {
+        height: 3vh;
+        margin-left: 0.5vh;
+        margin-bottom: 0.5vh;
+    }
+    .desctext {
+        font-size: 1.5vh;
+        margin-bottom: 2vh;
+    }
+
+    .staff {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-size: 2vh;
+    }
+
+    .seriesdescription {
+        padding-bottom: 15vh;
+    }
+
+    .workprogress {
+        font-size: 3vh;
     }
 }
