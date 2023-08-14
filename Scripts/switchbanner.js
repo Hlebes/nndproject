@@ -11,9 +11,9 @@ function SwitchBanner(el) {
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2logo")[0].src = logo;
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
-    }, 40)
+    }, 400)
     document.getElementById("viewcover").style.opacity = 1;
     setTimeout(function() {
         document.getElementById("viewcover").style.opacity = 0;
-    }, 10)
+    }, 100)
 }
