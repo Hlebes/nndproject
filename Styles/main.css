@@ -141,7 +141,7 @@ a {text-decoration: none;}
 }
 
 .mainseries {
-    height: 82vh;
+    height: 77vh;
     background-color: bisque;
     display: flex;
     width: 100%;
@@ -260,7 +260,7 @@ a {text-decoration: none;}
 .textbox {
     color:white;
     line-break: normal;
-    text-align: justify;
+    text-align: left;
     font-family: montserrat;
     font-weight: thin;
     font-size: 2vh;
