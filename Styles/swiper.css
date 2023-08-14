@@ -5,6 +5,7 @@
 }
 
 .swiper-slide {
+    overflow: hidden;
     border-radius: 1vh;
     text-align: center;
     font-size: 18px;
