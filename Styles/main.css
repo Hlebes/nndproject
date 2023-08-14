@@ -250,6 +250,16 @@ a {text-decoration: none;}
     text-align: center;
 }
 
+.desctext {
+    max-height: 11vh;
+    overflow-y: scroll;
+    max-height: 19vh;  
+}
+
+.desctext::-webkit-scrollbar {
+    display: none;
+}
+
 .textbox {
     color:white;
     line-break: normal;

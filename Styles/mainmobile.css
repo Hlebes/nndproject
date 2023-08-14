@@ -98,6 +98,8 @@
 
     .desctext {
         font-size: 1.3vh;
+        overflow-y: scroll;
+        max-height: 19vh;  
     }
     .seriespage {
         width: 91%;

@@ -74,6 +74,8 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         font-size: 2vh;
+        flex-wrap: nowrap;
+        flex-direction: column;
     }
 
     .seriesdescription {
