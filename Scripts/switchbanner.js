@@ -6,7 +6,7 @@ function SwitchBanner(el) {
     let linkto = el.children[3].innerHTML;
     console.log(document.getElementById("series2"));
     setTimeout(function() {
-        document.getElementById("series2").getElementsByClassName("bgcontent")[0].style.backgroundImage = thumb;
+        document.getElementById("series2").getElementsByClassName("bgcontent")[0].style.backgroundImage = "url('" + thumb + "');";
         document.getElementsByClassName("series2desc")[0].getElementsByTagName("a")[0].href = linkto;
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2logo")[0].src = logo;
         console.log(thumb);
