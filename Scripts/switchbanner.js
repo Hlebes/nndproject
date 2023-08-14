@@ -13,8 +13,8 @@ function SwitchBanner(el) {
         console.log("url('" + thumb + "');");
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
+        setTimeout(function() {
+            document.getElementById("viewcover").style.opacity = 0;
+        }, 150)
     }, 300)
-    setTimeout(function() {
-        document.getElementById("viewcover").style.opacity = 0;
-    }, 200)
 }
