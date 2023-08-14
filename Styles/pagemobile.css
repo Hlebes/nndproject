@@ -15,6 +15,7 @@
     }
     
     .seriesposter {
-        align-self: center;
+        width: 100vw;
+        height: unset;
     }
 }
