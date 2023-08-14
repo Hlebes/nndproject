@@ -12,9 +12,9 @@ function SwitchBanner(el) {
         console.log("url('" + thumb + "');");
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
         document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
-    }, 4000)
+    }, 400)
     document.getElementById("viewcover").style.opacity = 1;
     setTimeout(function() {
         document.getElementById("viewcover").style.opacity = 0;
-    }, 1000)
+    }, 100)
 }
