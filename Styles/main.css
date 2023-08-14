@@ -450,4 +450,5 @@ a.link:hover{
     background-color: rgb(21, 14, 27);
     transition: .3s;
     opacity: 0;
+    z-index: 9999;
 }
