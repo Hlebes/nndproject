@@ -22,4 +22,7 @@ function SwitchBanner(el) {
         }, 300)
         ignore = false;
     }
+    else {
+        console.log("Ignored function")
+    }
 }
