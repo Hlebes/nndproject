@@ -19,4 +19,20 @@
     .menupanel {
         height: 6vh; 
     }
+
+    #topmenulogoimg img {
+        height: 4vh;
+    }
+
+    .topmenubtn {
+        min-width: 6vw;
+        font-size: 1vh;
+    }
+
+    #topauth {
+        height: 4vh;
+        width: 4vh;
+        border-radius: 2vh;
+        background-color: blueviolet;
+    }
 }
