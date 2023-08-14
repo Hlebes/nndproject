@@ -62,4 +62,33 @@
         margin-bottom: 3vh;
         font-size: 2vh;
     }
+
+    .series {
+        flex-direction: column;
+        height: 62vh;
+    }
+
+    .seriesname {
+        font-size: 3vh;
+    }
+    .orig {
+        margin-bottom: 0.5vh;
+        font-size: 2vh;
+    }
+    .year {
+        font-size: 2vh;
+    }
+    .series .desc {
+        width: 77vw;
+        top: 23vh;
+    }
+    .desctext {
+        font-size: 1.3vh;
+    }
+    .seriespage {
+        width: 91%;
+        border-radius: 1vh 1vh 11vh 11vh;
+        bottom: 2vh;
+        left: 4vw;
+    }
 }
