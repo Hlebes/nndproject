@@ -61,6 +61,7 @@
     .description a {
         margin-bottom: 3vh;
         font-size: 2vh;
+        width: 80%;
     }
 
     .series {
