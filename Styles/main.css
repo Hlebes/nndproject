@@ -278,7 +278,7 @@ a {text-decoration: none;}
 
 .series {
     position: relative;
-    display: flex;
+    display: hidden;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
