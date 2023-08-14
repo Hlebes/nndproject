@@ -4,25 +4,21 @@
 }
 
 @font-face {
-    font-family: montserrat;
+    font-family: montserratbold;
     src: url(../Assets/Fonts/Montserrat-Bold.otf);
-    font-weight: boldd;
 }
 
 @font-face {
-    font-family: montserrat;
+    font-family: montserratthin;
     src: url(../Assets/Fonts/Montserrat-Thin.otf);
-    font-weight: thinn;
 }
 
 @font-face {
-    font-family: montserrat;
+    font-family: montserratitalic;
     src: url(../Assets/Fonts/Montserrat-Italic.otf);
-    font-weight: italicc;
 }
 
 @font-face {
-    font-family: montserrat;
+    font-family: montserratbolditalic;
     src: url(../Assets/Fonts/Montserrat-BoldItalic.otf);
-    font-weight: bolditalic;
 }
