@@ -18,9 +18,9 @@ function SwitchBanner(el) {
             document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
             setTimeout(function() {
                 document.getElementById("viewcover").style.opacity = 0;
+                ignore = false;
             }, 150)
         }, 300)
-        ignore = false;
     }
     else {
         console.log("Ignored function")
