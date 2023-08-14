@@ -403,7 +403,7 @@ a {text-decoration: none;}
 }
 
 .series2logo {
-    height: 6vh;
+    height: 15vh;
     margin-bottom: 2vh;
 }
 
@@ -412,7 +412,7 @@ a {text-decoration: none;}
     color: white;
     line-break: normal;
     text-align: left;
-    font-family: montserratthin;
+    font-family: 'montserrat';
     font-size: 2vh;
     max-height: 42vh;
 }
