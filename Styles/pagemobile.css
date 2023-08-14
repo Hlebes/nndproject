@@ -16,9 +16,8 @@
     .seriesposter {
         width: 100vw;
         height: unset;
-        margin-top: unset;
         margin-right: unset;
-        margin-left: unset;
+        margin-bottom: 5vh;
     }
 
     .episodeselect {
@@ -31,5 +30,15 @@
         width: 94vw;
     }
 
+    .generalinfo {
+        flex-direction: column;
+    }
 
+    .infotitle {
+        width: 100%;
+    }
+
+    .studioslogos {
+        width: 100%;
+    }
 }
