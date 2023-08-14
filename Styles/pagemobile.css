@@ -3,4 +3,8 @@
         width: 100vw;
         height: 30vh;
     }
+    .view {
+        flex-direction: column;
+        height: 100vh;
+    }
 }
