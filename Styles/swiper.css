@@ -27,7 +27,8 @@
 }
 
 .swiper-slide label {
-    margin-right: 3vh;
+    margin-right: 12vh;
+    max-width: 5vw;
 }
 
 .swiper-slide img {
