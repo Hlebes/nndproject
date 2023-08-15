@@ -16,13 +16,23 @@ function SwitchBanner(el) {
             console.log("url('" + thumb + "');");
             document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
             document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
-            setTimeout(function() {
-                document.getElementById("viewcover").style.opacity = 0;
-                ignore = false;
-            }, 150)
+            // setTimeout(function() {
+                //document.getElementById("viewcover").style.opacity = 0;
+                //ignore = false;
+            // }, 150)
         }, 300)
     }
     else {
         console.log("Ignored function")
     }
+}
+
+function RemoveCover() {
+    document.getElementById("viewcover").style.opacity = 0;
+    ignore = false;
+}
+
+function ErrCover() {
+    document.getElementById("viewcover").style.opacity = 0;
+    ignore = false;
 }
