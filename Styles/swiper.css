@@ -15,7 +15,7 @@
     border-radius: 1vh;
     text-align: center;
     font-size: 18px;
-    height: 15vh;
+    height: 13vh !important;
     background: #fff;
     display: flex;
     justify-content: center;
