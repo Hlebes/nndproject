@@ -5,7 +5,11 @@
     border-radius: 1vh;
 }
 
+.swiper-wrapper {align-items: center;}
+
 .swiper-slide {
+    margin-left: 2vh;
+    margin-right: 2vh;
     cursor: pointer;
     overflow: hidden;
     border-radius: 1vh;
