@@ -454,6 +454,7 @@ a.link:hover{
 }
 
 .trailer {
+    display: none;
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -464,6 +465,7 @@ a.link:hover{
 }
 
 .trailerbtn {
+    display: none;
     position: fixed;
     width: 5vh;
     height: 5vh;
