@@ -13,16 +13,21 @@
     cursor: pointer;
     overflow: hidden;
     border-radius: 1vh;
-    text-align: center;
-    font-size: 18px;
+    text-align: left;
+    font-size: 3vh;
     height: 13vh !important;
     background: rgb(11, 6, 17);;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .2s;
-    color: #000;
+    color: aliceblue;
     font-family: montserratbold;
+    position: relative;
+}
+
+.swiper-slide label {
+    margin-right: 3vh;
 }
 
 .swiper-slide img {
