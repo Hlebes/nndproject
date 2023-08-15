@@ -481,6 +481,36 @@ a.link:hover{
     transition: .2s;
 }
 
+.series2btns {
+    display: flex;
+}
+
+.series2trailer {
+    margin-left: 1vw;
+}
+
+.series2trailer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 6vh;
+    border-radius: 1vh;
+    background-color: aliceblue;
+    color: black;
+    transition: .3s;
+    font-size: 1.2vw;
+    font-weight: bold;
+    font-family: montserratbold;
+    font-weight: bold;
+}
+
+.series2trailer:hover{
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+
 .trailerbtn:hover img{
     filter: drop-shadow(0px 0px 1vh rgb(211, 183, 236));
 }

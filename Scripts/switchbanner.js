@@ -16,6 +16,7 @@ function SwitchBanner(el) {
             let logo = el.children[1].innerHTML;
             let desc = el.children[2].innerHTML;
             let linkto = el.children[3].innerHTML;
+            let trailerlink = el.children[4].innerHTML;
             console.log(document.getElementById("series2"));
             setTimeout(function() {
                 document.getElementById("series2").getElementsByClassName("bgcontent")[0].style = "background-image: url('" + thumb + "');";
@@ -24,6 +25,7 @@ function SwitchBanner(el) {
                 console.log("url('" + thumb + "');");
                 document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2desctext")[0].innerHTML = desc;
                 document.getElementsByClassName("series2desc")[0].getElementsByClassName("link")[0].href = linkto;
+                document.getElementsByClassName("series2desc")[0].getElementsByClassName("series2trailer")[0].value = trailerlink;
                 // setTimeout(function() {
                     //document.getElementById("viewcover").style.opacity = 0;
                     //ignore = false;
@@ -42,8 +44,12 @@ function RemoveCover() {
     ignore = false;
 }
 
-function OpenTrailer(el) {
-    
+function ShowTrailer(el) {
+    let link = el.value;
+    let trailerplayer = document.getElementsByClassName("trailer")[0];
+    trailerplayer.src = link;
+    trailerplayer.style.display = "block";
+    document.getElementsByClassName("trailerbtn")[0].style.display = "block"
 }
 
 function CloseTrailer() {
