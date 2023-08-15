@@ -483,6 +483,7 @@ a.link:hover{
 
 .series2btns {
     display: flex;
+    width: 100%;
 }
 
 .series2trailer {
