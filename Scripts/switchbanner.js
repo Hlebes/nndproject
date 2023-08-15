@@ -5,6 +5,11 @@ function SwitchBanner(el) {
     {
         if (element != el) {
             ignore = true;
+            let slides = document.getElementsByClassName("swiper-slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.filter = "unset";
+            }
+            el.style.filter = "drop-shadow(0px 0px 20px #000000)";
             document.getElementById("viewcover").style.opacity = 1;
             let thumb = el.children[0].innerHTML;
             let logo = el.children[1].innerHTML;
