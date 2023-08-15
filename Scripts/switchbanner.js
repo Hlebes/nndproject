@@ -41,3 +41,12 @@ function RemoveCover() {
     document.getElementById("viewcover").style.opacity = 0;
     ignore = false;
 }
+
+function OpenTrailer(el) {
+    
+}
+
+function CloseTrailer() {
+    document.getElementsByClassName("trailer")[0].style.display = "none";
+    document.getElementsByClassName("trailerbtn")[0].style.display = "none";
+}
