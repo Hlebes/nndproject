@@ -452,3 +452,18 @@ a.link:hover{
     z-index: 9999;
     pointer-events: none;
 }
+
+.trailer {
+    position: absolute;
+    z-index: 9999;
+
+}
+
+.trailerbtn {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    right: 10vh;
+    top: 10vh;
+    z-index: 99999;
+}
