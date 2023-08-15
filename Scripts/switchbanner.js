@@ -1,5 +1,6 @@
 let ignore = false;
 let element;
+document.getElementsByClassName("swiper-slide")[0].style.boxShadow = "0vh 0vw 4vh 0.5vh #FFFFFF";
 function SwitchBanner(el) {
     if (!ignore)
     {
@@ -7,9 +8,9 @@ function SwitchBanner(el) {
             ignore = true;
             let slides = document.getElementsByClassName("swiper-slide");
             for (let i = 0; i < slides.length; i++) {
-                slides[i].style.filter = "unset";
+                slides[i].style.boxShadow = "0vh 0vw 0vh 0vh #FFFFFF";
             }
-            el.style.filter = "drop-shadow(0px 0px 20px #000000)";
+            el.style.boxShadow = "0vh 0vw 4vh 0.5vh #FFFFFF";
             document.getElementById("viewcover").style.opacity = 1;
             let thumb = el.children[0].innerHTML;
             let logo = el.children[1].innerHTML;
