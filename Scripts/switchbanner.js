@@ -10,7 +10,7 @@ function SwitchBanner(el) {
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.boxShadow = "0vh 0vw 0vh 0vh blueviolet";
             }
-            el.style.boxShadow = "0vh 0vw 2vh 0vh #FFFFFF";
+            el.style.boxShadow = "0vh 0vw 0vh 0vh blueviolet";
             document.getElementById("viewcover").style.opacity = 1;
             let thumb = el.children[0].innerHTML;
             let logo = el.children[1].innerHTML;
