@@ -9,7 +9,8 @@
 
     .mainseries {
         flex-direction: column;
-        height: 94vh;
+        height: 85vh;
+        margin-bottom: 0;
     }
 
     .contentbox {
