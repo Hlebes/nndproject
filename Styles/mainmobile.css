@@ -135,7 +135,6 @@
 
     .series2logo {
         height: unset;
-        width: 100%;
         filter: drop-shadow(0px 0px 10px #000);
     }
 
@@ -161,5 +160,17 @@
     .series2btns a, .series2trailer {
         width: 100%;
         font-size: 4vw;
+    }
+
+    .series2logowrapper {
+        height: 14vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .series2logowrapper img {
+        object-fit: contain;
     }
 }
