@@ -113,4 +113,39 @@
         bottom: 2vh;
         left: 4vw;
     }
+    .bggradient {
+        transform: rotate(270deg);
+        top: -12vh;
+    }
+
+    .bgcontent {
+        height: 26vh;
+        width: 100%;
+    }
+
+    .series2desc {
+        width: 73vw;
+        height: 57vh;
+    }
+
+    .series2logo {
+        width: 100%;
+        filter: drop-shadow(0px 0px 10px #000);
+    }
+
+    .series2desctext {
+        width: 100%;
+    }
+
+    .series2btns {
+        flex-direction: column;
+    }
+
+    .series2trailer {
+        margin-left: 0;
+    }
+
+    .series2btns a, .series2trailer {
+        width: 100%;
+    }
 }
