@@ -272,10 +272,6 @@ a {text-decoration: none;}
     display: none;
 }
 
-.addseries {
-    min-height: 400px;
-}
-
 .series {
     position: relative;
     display: none;
