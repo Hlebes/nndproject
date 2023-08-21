@@ -6,5 +6,5 @@ function LoadOff() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  document.getElementByClassName("page")[0].style.display = "block";
+  document.getElementById("wholecontent").style.display = "block";
 }
