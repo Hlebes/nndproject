@@ -5,10 +5,12 @@
         <link rel="stylesheet" type="text/css" href="..\Styles\swiperjs.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\mainmobile.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\montserratfont.css" />
+        <link rel="stylesheet" type="text/css" href="..\Styles\loader.css" />
         <link rel="icon" href="..\Assets\Pictures\Logos\ND.png">
         <title>NND - Главная</title>
     </head>
-    <body>
+    <body onload="LoadOff()">
+        <div id="loader"></div>
         <div class="trailerbtn" onclick="CloseTrailer()">
             <img src="..\Assets\Pictures\UI\cross.svg">
         </div>
@@ -45,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="page">
+        <div class="page animate-bottom">
             <div class="mainseries">
                 <div class="contentbox">
                     <div class="thumbnail">
@@ -137,5 +139,6 @@
             </div>
         </div>
         <script src="..\Scripts\switchbanner.js"></script>
+        <script src="..\Scripts\loader.js"></script>
     </body>
 </html>
