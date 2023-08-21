@@ -9,7 +9,7 @@
         <link rel="icon" href="..\Assets\Pictures\Logos\ND.png">
         <title>NND - Главная</title>
     </head>
-    <body onload="LoadOff()">
+    <body>
         <div id="loader"></div>
         <div class="trailerbtn" onclick="CloseTrailer()">
             <img src="..\Assets\Pictures\UI\cross.svg">
@@ -50,7 +50,7 @@
         <div class="page animate-bottom">
             <div class="mainseries">
                 <div class="contentbox">
-                    <div class="thumbnail">
+                    <div class="thumbnail" onload="LoadOff()">
                         <style>
                             .thumbnail {
                                 position: absolute;
