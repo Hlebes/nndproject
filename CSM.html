@@ -5,134 +5,139 @@
         <link rel="stylesheet" type="text/css" href="..\Styles\mainmobile.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\seriespage.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\pagemobile.css" />
+        <link rel="stylesheet" type="text/css" href="..\Styles\loader.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\montserratfont.css" />
         <link rel="icon" href="..\Assets\Pictures\Logos\ND.png">
         <title>NND - Человек-бензопила</title>
     </head>
-    <body>
-        <div class="menupanel">
-            <div class="wrapper navpanel">
-                <a href="index.html" id="topmenulogo">
-                    <div id="topmenulogoimg">
-                        <img src="..\Assets\Pictures\Logos\ND.png">
-                    </div>
-                    <H2>NoNameDUB<br>Project</H2>
-                </a>
-                <div id="topmenu">
-                    <a href="discover.html">
+    <body onload="LoadOff()">
+        <div id="loader"></div>
+        <div id="wholecontent" style="display: none;">
+            <div class="menupanel">
+                <div class="wrapper navpanel">
+                    <a href="index.html" id="topmenulogo">
+                        <div id="topmenulogoimg">
+                            <img src="..\Assets\Pictures\Logos\ND.png">
+                        </div>
+                        <H2>NoNameDUB<br>Project</H2>
+                    </a>
+                    <div id="topmenu">
+                        <a href="discover.html">
+                            <div class="topmenubtn">
+                                <label>Смотреть</label>
+                                <div class="hoverline"></div>
+                            </div>
+                        </a>
                         <div class="topmenubtn">
-                            <label>Смотреть</label>
+                            <label>Закладки</label>
                             <div class="hoverline"></div>
                         </div>
-                    </a>
-                    <div class="topmenubtn">
-                        <label>Закладки</label>
-                        <div class="hoverline"></div>
+                        <div class="topmenubtn">
+                            <label>История</label>
+                            <div class="hoverline"></div>
+                        </div>
                     </div>
-                    <div class="topmenubtn">
-                        <label>История</label>
-                        <div class="hoverline"></div>
-                    </div>
-                </div>
-                <div id="authmenu">
-                    <div id="topauth">
-                    </div>
-                    <label>Nickname</label>
-                </div>
-            </div>
-        </div>
-        <div class="page">
-            <div class="view">
-                <iframe class="videoplayer" src="https://anivod.com/uv/393541/43af12a47b3d2cf00864/720p?hide_selectors=true" hideselectors="true" frameborder="0" allowfullscreen></iframe>
-                <script>
-                    let player = document.getElementsByClassName('videoplayer')[0];
-                    player.getElementsByClassName('movie-panel')[0].style.display = "none";
-                </script>
-                <div class="episodeselect">
-                    <div class="episode" onclick="SwitchEp(this)" style="background-color: rgb(38, 18, 56); color: #FFFFFF">
-                        <label>1 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/393541/43af12a47b3d2cf00864/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>2 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/393542/49cfd2c9401bb7ff90d6/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>3 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/393543/8e4f0fed1147ea618950/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>4 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/393554/2968cdc3024c758ebacd/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>5 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/393555/da0b9dedd3a70c0933e3/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>6 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/395756/87f99657444c09eed095/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>7 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/396685/fa8b2987ae2f18b56d4e/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>8 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/400495/bc7970c853a1a9836314/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>9 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/400494/1ac03cc5d177b247235a/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>10 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/402097/6307702671a390f56999/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>11 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/404211/4735d15d0f0e47f3b0f6/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>12 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/407404/629729fe804b6a74787d/720p?hide_selectors=true</label>
+                    <div id="authmenu">
+                        <div id="topauth">
+                        </div>
+                        <label>Nickname</label>
                     </div>
                 </div>
             </div>
-            <div class="serieslending">
-                <img class="seriesposter" src="..\Assets\Pictures\Posters\CSM.jpg">
-                <div class="seriesdescription">
-                    <div class="generalinfo">
-                        <div class="infotitle">
-                            <H1 class="seriestitle">Человек-бензопила</H1>
-                            <H3 class="seriesorigtitle">Chainsaw Man</H3>
-                            <H3 class="seriesyear">2022</H3>
+            <div class="page">
+                <div class="view">
+                    <iframe class="videoplayer" src="https://anivod.com/uv/393541/43af12a47b3d2cf00864/720p?hide_selectors=true" hideselectors="true" frameborder="0" allowfullscreen></iframe>
+                    <script>
+                        let player = document.getElementsByClassName('videoplayer')[0];
+                        player.getElementsByClassName('movie-panel')[0].style.display = "none";
+                    </script>
+                    <div class="episodeselect">
+                        <div class="episode" onclick="SwitchEp(this)" style="background-color: rgb(38, 18, 56); color: #FFFFFF">
+                            <label>1 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/393541/43af12a47b3d2cf00864/720p?hide_selectors=true</label>
                         </div>
-                        <div class="studioslogos">
-                            <img src="..\Assets\Pictures\Studios\mappa.jpg">
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>2 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/393542/49cfd2c9401bb7ff90d6/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>3 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/393543/8e4f0fed1147ea618950/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>4 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/393554/2968cdc3024c758ebacd/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>5 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/393555/da0b9dedd3a70c0933e3/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>6 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/395756/87f99657444c09eed095/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>7 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/396685/fa8b2987ae2f18b56d4e/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>8 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/400495/bc7970c853a1a9836314/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>9 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/400494/1ac03cc5d177b247235a/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>10 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/402097/6307702671a390f56999/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>11 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/404211/4735d15d0f0e47f3b0f6/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>12 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/407404/629729fe804b6a74787d/720p?hide_selectors=true</label>
                         </div>
                     </div>
-                    <p class="desctext">Денджи хотел жить спокойной жизнью, но, чтобы расплатиться с оставшимися от отца долгами, был вынужден заниматься нелегальной охотой на демонов и однажды погиб. Его не самый обычный домашний питомец Почита каким-то образом слился с его мертвым телом, и теперь парень способен превращать конечности в бензопилы. Такого ценного кадра нанимает Бюро общественной безопасности, чтобы тот снова охотился на демонов — теперь официально.</p>
-                    <div class="staff">
-                        <div class="staffdiv">
-                            <label class="creator">Автор идеи:&nbsp;</label> <label class="creatorname">Тацуки Фуджимото</label>
+                </div>
+                <div class="serieslending">
+                    <img class="seriesposter" src="..\Assets\Pictures\Posters\CSM.jpg">
+                    <div class="seriesdescription">
+                        <div class="generalinfo">
+                            <div class="infotitle">
+                                <H1 class="seriestitle">Человек-бензопила</H1>
+                                <H3 class="seriesorigtitle">Chainsaw Man</H3>
+                                <H3 class="seriesyear">2022</H3>
+                            </div>
+                            <div class="studioslogos">
+                                <img src="..\Assets\Pictures\Studios\mappa.jpg">
+                            </div>
                         </div>
-                        <div class="staffdiv">
-                            <label class="storywriter">Сценарист:&nbsp;</label> <label class="storywritername">Тацуки Фуджимото</label>
+                        <p class="desctext">Денджи хотел жить спокойной жизнью, но, чтобы расплатиться с оставшимися от отца долгами, был вынужден заниматься нелегальной охотой на демонов и однажды погиб. Его не самый обычный домашний питомец Почита каким-то образом слился с его мертвым телом, и теперь парень способен превращать конечности в бензопилы. Такого ценного кадра нанимает Бюро общественной безопасности, чтобы тот снова охотился на демонов — теперь официально.</p>
+                        <div class="staff">
+                            <div class="staffdiv">
+                                <label class="creator">Автор идеи:&nbsp;</label> <label class="creatorname">Тацуки Фуджимото</label>
+                            </div>
+                            <div class="staffdiv">
+                                <label class="storywriter">Сценарист:&nbsp;</label> <label class="storywritername">Тацуки Фуджимото</label>
+                            </div>
+                            <div class="staffdiv">
+                                <label class="storywriter">Режиссёр:&nbsp;</label> <label class="storywritername">Рю Накаяма</label>
+                            </div>
+                            <div class="staffdiv">
+                                <label class="composer">Композитор:&nbsp;</label> <label class="composername">Кенсуке Ушио</label>
+                            </div>
                         </div>
-                        <div class="staffdiv">
-                            <label class="storywriter">Режиссёр:&nbsp;</label> <label class="storywritername">Рю Накаяма</label>
+                        <div class="workprogress">
+                            <label class="status">Завершено: 12/12 серий</label>
                         </div>
-                        <div class="staffdiv">
-                            <label class="composer">Композитор:&nbsp;</label> <label class="composername">Кенсуке Ушио</label>
-                        </div>
-                    </div>
-                    <div class="workprogress">
-                        <label class="status">Завершено: 12/12 серий</label>
                     </div>
                 </div>
             </div>
         </div>
     </body>
     <script src="..\Scripts\pickep.js"></script>
+    <script src="..\Scripts\loader.js"></script>
 </html>

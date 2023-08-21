@@ -5,140 +5,145 @@
         <link rel="stylesheet" type="text/css" href="..\Styles\mainmobile.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\seriespage.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\pagemobile.css" />
+        <link rel="stylesheet" type="text/css" href="..\Styles\loader.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\montserratfont.css" />
         <link rel="icon" href="..\Assets\Pictures\Logos\ND.png">
         <title>NND - Ковбой Бибоп</title>
     </head>
-    <body>
-        <div class="menupanel">
-            <div class="wrapper navpanel">
-                <a href="index.html" id="topmenulogo">
-                    <div id="topmenulogoimg">
-                        <img src="..\Assets\Pictures\Logos\ND.png">
-                    </div>
-                    <H2>NoNameDUB<br>Project</H2>
-                </a>
-                <div id="topmenu">
-                    <a href="discover.html">
+    <body onload="LoadOff()">
+        <div id="loader"></div>
+        <div id="wholecontent" style="display: none;">
+            <div class="menupanel">
+                <div class="wrapper navpanel">
+                    <a href="index.html" id="topmenulogo">
+                        <div id="topmenulogoimg">
+                            <img src="..\Assets\Pictures\Logos\ND.png">
+                        </div>
+                        <H2>NoNameDUB<br>Project</H2>
+                    </a>
+                    <div id="topmenu">
+                        <a href="discover.html">
+                            <div class="topmenubtn">
+                                <label>Смотреть</label>
+                                <div class="hoverline"></div>
+                            </div>
+                        </a>
                         <div class="topmenubtn">
-                            <label>Смотреть</label>
+                            <label>Закладки</label>
                             <div class="hoverline"></div>
                         </div>
-                    </a>
-                    <div class="topmenubtn">
-                        <label>Закладки</label>
-                        <div class="hoverline"></div>
+                        <div class="topmenubtn">
+                            <label>История</label>
+                            <div class="hoverline"></div>
+                        </div>
                     </div>
-                    <div class="topmenubtn">
-                        <label>История</label>
-                        <div class="hoverline"></div>
-                    </div>
-                </div>
-                <div id="authmenu">
-                    <div id="topauth">
-                    </div>
-                    <label>Nickname</label>
-                </div>
-            </div>
-        </div>
-        <div class="page">
-            <div class="view">
-                <iframe class="videoplayer" src="https://anivod.com/uv/419994/e65e962e3d8f1c28dd35/720p?hide_selectors=true" hideselectors="true" frameborder="0" allowfullscreen></iframe>
-                <script>
-                    let player = document.getElementsByClassName('videoplayer')[0];
-                    player.getElementsByClassName('movie-panel')[0].style.display = "none";
-                </script>
-                <div class="episodeselect">
-                    <div class="episode" onclick="SwitchEp(this)" style="background-color: rgb(38, 18, 56); color: #FFFFFF">
-                        <label>1 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/419994/e65e962e3d8f1c28dd35/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>2 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/427528/74985e5e3743b22fcded/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>3 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/429966/e708fe9b9745b4db04db/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>4 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/432129/4ffdaaebd5ce4d1d29d4/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>5 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/432901/9af39579ce8eda797838/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>6 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/435385/735fdbcc95759268f800/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>7 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/438824/c0b1f88570b871080c91/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>8 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/443004/d63348e1fc46b8f50f18/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>9 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/447151/7273ad5826fb8c5b1d4d/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>10 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/455437/737c2ce06900c7f21aa1/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>11 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/458206/6a8c247daef6d3ab0a2f/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>12 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/462177/06eba1a6f93322a7c732/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>13 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/474419/aba86617abff8de5d640/720p?hide_selectors=true</label>
-                    </div>
-                    <div class="episode" onclick="SwitchEp(this)">
-                        <label>14 Серия</label>
-                        <label class="ep_page">https://anivod.com/uv/480750/6be19f2146ab76201bd7/720p?hide_selectors=true</label>
+                    <div id="authmenu">
+                        <div id="topauth">
+                        </div>
+                        <label>Nickname</label>
                     </div>
                 </div>
             </div>
-            <div class="serieslending">
-                <img class="seriesposter" src="..\Assets\Pictures\Posters\CBB.jpg">
-                <div class="seriesdescription">
-                    <div class="generalinfo">
-                        <div class="infotitle">
-                            <H1 class="seriestitle">Ковбой Бибоп</H1>
-                            <H3 class="seriesorigtitle">Cowboy Bebop</H3>
-                            <H3 class="seriesyear">1998</H3>
+            <div class="page">
+                <div class="view">
+                    <iframe class="videoplayer" src="https://anivod.com/uv/419994/e65e962e3d8f1c28dd35/720p?hide_selectors=true" hideselectors="true" frameborder="0" allowfullscreen></iframe>
+                    <script>
+                        let player = document.getElementsByClassName('videoplayer')[0];
+                        player.getElementsByClassName('movie-panel')[0].style.display = "none";
+                    </script>
+                    <div class="episodeselect">
+                        <div class="episode" onclick="SwitchEp(this)" style="background-color: rgb(38, 18, 56); color: #FFFFFF">
+                            <label>1 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/419994/e65e962e3d8f1c28dd35/720p?hide_selectors=true</label>
                         </div>
-                        <div class="studioslogos">
-                            <img src="..\Assets\Pictures\Studios\Sunrise.png">
-                            <img src="..\Assets\Pictures\Studios\BANDAI.svg">
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>2 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/427528/74985e5e3743b22fcded/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>3 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/429966/e708fe9b9745b4db04db/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>4 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/432129/4ffdaaebd5ce4d1d29d4/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>5 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/432901/9af39579ce8eda797838/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>6 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/435385/735fdbcc95759268f800/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>7 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/438824/c0b1f88570b871080c91/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>8 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/443004/d63348e1fc46b8f50f18/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>9 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/447151/7273ad5826fb8c5b1d4d/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>10 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/455437/737c2ce06900c7f21aa1/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>11 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/458206/6a8c247daef6d3ab0a2f/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>12 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/462177/06eba1a6f93322a7c732/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>13 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/474419/aba86617abff8de5d640/720p?hide_selectors=true</label>
+                        </div>
+                        <div class="episode" onclick="SwitchEp(this)">
+                            <label>14 Серия</label>
+                            <label class="ep_page">https://anivod.com/uv/480750/6be19f2146ab76201bd7/720p?hide_selectors=true</label>
                         </div>
                     </div>
-                    <p class="desctext">Бывший полицейский Джет Блэк и человек с тёмным прошлым Спайк Шпигель совершенно не планировали увеличивать экипаж космического корабля «Бибоп», являющегося для них домом и средством передвижения. Но сети, раскинутые для поимки дорогостоящих отбросов общества, принесли им Фэй Валентайн — очаровательную картёжницу с колоссальным долгом, Эд — потерявшуюся компьютерную умницу и Эйн — предположительно, самую умную собаку на свете. Именно в таком составе экипаж «Бибопа» и продолжает своё дело — охоту за головами.</p>
-                    <div class="staff">
-                        <div class="staffdiv">
-                            <label class="creator">Автор идеи:&nbsp;</label> <label class="creatorname">Шинчиро Ватанабе</label>
+                </div>
+                <div class="serieslending">
+                    <img class="seriesposter" src="..\Assets\Pictures\Posters\CBB.jpg">
+                    <div class="seriesdescription">
+                        <div class="generalinfo">
+                            <div class="infotitle">
+                                <H1 class="seriestitle">Ковбой Бибоп</H1>
+                                <H3 class="seriesorigtitle">Cowboy Bebop</H3>
+                                <H3 class="seriesyear">1998</H3>
+                            </div>
+                            <div class="studioslogos">
+                                <img src="..\Assets\Pictures\Studios\Sunrise.png">
+                                <img src="..\Assets\Pictures\Studios\BANDAI.svg">
+                            </div>
                         </div>
-                        <div class="staffdiv">
-                            <label class="storywriter">Сценарист:&nbsp;</label> <label class="storywritername">Кейко Нобумото</label>
+                        <p class="desctext">Бывший полицейский Джет Блэк и человек с тёмным прошлым Спайк Шпигель совершенно не планировали увеличивать экипаж космического корабля «Бибоп», являющегося для них домом и средством передвижения. Но сети, раскинутые для поимки дорогостоящих отбросов общества, принесли им Фэй Валентайн — очаровательную картёжницу с колоссальным долгом, Эд — потерявшуюся компьютерную умницу и Эйн — предположительно, самую умную собаку на свете. Именно в таком составе экипаж «Бибопа» и продолжает своё дело — охоту за головами.</p>
+                        <div class="staff">
+                            <div class="staffdiv">
+                                <label class="creator">Автор идеи:&nbsp;</label> <label class="creatorname">Шинчиро Ватанабе</label>
+                            </div>
+                            <div class="staffdiv">
+                                <label class="storywriter">Сценарист:&nbsp;</label> <label class="storywritername">Кейко Нобумото</label>
+                            </div>
+                            <div class="staffdiv">
+                                <label class="composer">Композитор:&nbsp;</label> <label class="composername">Йоко Канно и Seatbelts</label>
+                            </div>
                         </div>
-                        <div class="staffdiv">
-                            <label class="composer">Композитор:&nbsp;</label> <label class="composername">Йоко Канно и Seatbelts</label>
+                        <div class="workprogress">
+                            <label class="status">В работе: 14/26 серий</label>
                         </div>
-                    </div>
-                    <div class="workprogress">
-                        <label class="status">В работе: 14/26 серий</label>
                     </div>
                 </div>
             </div>
         </div>
     </body>
     <script src="..\Scripts\pickep.js"></script>
+    <script src="..\Scripts\loader.js"></script>
 </html>

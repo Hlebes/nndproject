@@ -5,55 +5,60 @@
         <link rel="stylesheet" type="text/css" href="..\Styles\swiperjs.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\mainmobile.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\discover.css" />
+        <link rel="stylesheet" type="text/css" href="..\Styles\loader.css" />
         <link rel="stylesheet" type="text/css" href="..\Styles\montserratfont.css" />
         <title>NND - Главная</title>
     </head>
-    <body>
-        <div class="trailerbtn" onclick="CloseTrailer()">
-            <img src="..\Assets\Pictures\UI\cross.svg">
-        </div>
-        <iframe class="trailer "src="https://www.youtube.com/embed/tAwdYeKUvFM">
-        </iframe>
-        <div class="menupanel">
-            <div class="wrapper navpanel">
-                <a href="index.html" id="topmenulogo">
-                    <div id="topmenulogoimg">
-                        <img src="..\Assets\Pictures\Logos\ND.png">
-                    </div>
-                    <H2>NoNameDUB<br>Project</H2>
-                </a>
-                <div id="topmenu">
-                    <a href="discover.html">
+    <body onload="LoadOff()">
+        <div id="loader"></div>
+        <div id="wholecontent" style="display: none;">
+            <div class="trailerbtn" onclick="CloseTrailer()">
+                <img src="..\Assets\Pictures\UI\cross.svg">
+            </div>
+            <iframe class="trailer "src="https://www.youtube.com/embed/tAwdYeKUvFM">
+            </iframe>
+            <div class="menupanel">
+                <div class="wrapper navpanel">
+                    <a href="index.html" id="topmenulogo">
+                        <div id="topmenulogoimg">
+                            <img src="..\Assets\Pictures\Logos\ND.png">
+                        </div>
+                        <H2>NoNameDUB<br>Project</H2>
+                    </a>
+                    <div id="topmenu">
+                        <a href="discover.html">
+                            <div class="topmenubtn">
+                                <label>Смотреть</label>
+                                <div class="hoverline"></div>
+                            </div>
+                        </a>
                         <div class="topmenubtn">
-                            <label>Смотреть</label>
+                            <label>Закладки</label>
                             <div class="hoverline"></div>
                         </div>
-                    </a>
-                    <div class="topmenubtn">
-                        <label>Закладки</label>
-                        <div class="hoverline"></div>
+                        <div class="topmenubtn">
+                            <label>История</label>
+                            <div class="hoverline"></div>
+                        </div>
                     </div>
-                    <div class="topmenubtn">
-                        <label>История</label>
-                        <div class="hoverline"></div>
+                    <div id="authmenu">
+                        <div id="topauth">
+                        </div>
+                        <label>Nickname</label>
                     </div>
-                </div>
-                <div id="authmenu">
-                    <div id="topauth">
-                    </div>
-                    <label>Nickname</label>
                 </div>
             </div>
-        </div>
-        <div class="page">
-            <div class="allwatchlist">
-                <div class="series1">
-                    <div class="series1desc">
-                        <p>Описание</p>
-                        <a class="series1btn"></a>
+            <div class="page">
+                <div class="allwatchlist">
+                    <div class="series1">
+                        <div class="series1desc">
+                            <p>Описание</p>
+                            <a class="series1btn"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="..\Scripts\loader.js"></script>
     </body>
 </html>
