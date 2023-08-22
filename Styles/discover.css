@@ -84,5 +84,16 @@
     background-color: aliceblue;
     color:rgb(11, 6, 17);
     transition: .2s;
-    width: 95%
+    width: 95%;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+}
+
+.series1btns .series1btn:hover {
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
 }
