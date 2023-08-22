@@ -60,7 +60,12 @@
 .series1desc p{
     font-family: montserrat;
     font-size: 2vh;
-    max-width: 100%;
+    max-width: 95%;
+    max-height: 15vh;
+    overflow: hidden;
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
     text-align: center;
 }
 
