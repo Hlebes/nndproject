@@ -7,6 +7,12 @@
     border-radius: 1vh;
     cursor: pointer;
     overflow: hidden;
+    color: aliceblue;
+    font-family: montserrat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .allwatchlist {
@@ -19,7 +25,7 @@
     bottom: 0;
     width: 100%;
     height: 0%;
-    transition: .2s;
+    transition: .3s;
     pointer-events: none;
     background: rgba(11, 6, 17,0.2);
     background: -moz-linear-gradient(top, rgba(17, 6, 24, 0.2) 0%, rgba(11, 6, 17,0.72) 25%, rgba(11, 6, 17,0.82) 53%, rgba(11, 6, 17,0.95) 90%, rgba(11, 6, 17,0.95) 100%);
@@ -33,4 +39,39 @@
 
 .series1:hover .bg-transparent{
     height: 100%;
+}
+
+.series1:hover .series1desc { opacity: 1;}
+
+.series1title {
+    font-family: montserratbold;
+    font-size: 3vh;
+    max-width: 100%;
+}
+
+.series1desc p{
+    font-family: montserrat;
+    font-size: 2vh;
+    max-width: 100%;
+}
+
+.series1desc {
+    opacity: 0;
+    transition: .2s;
+}
+
+
+
+.series1btns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.series1btns .series1btn {
+    height: 5vh;
+    margin-bottom: 1vh;
+    background-color: aliceblue;
+    color:rgba(11, 6, 17,0.2);
+    transition: .2s;
 }
