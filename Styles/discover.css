@@ -20,6 +20,8 @@
     padding-top: 4vh;
     display: flex;
     flex-wrap: wrap;
+    min-height: 83vh;
+    justify-content: space-between;
 }
 
 .bg-transparent {
