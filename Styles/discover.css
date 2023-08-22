@@ -1,6 +1,7 @@
 .series1 {
-    width: 20vh;
+    width: 28vh;
     height: 42vh;
     background-image: url('..\\Assets\\Pictures\\Posters\\CBB.jpg');
     background-size: cover;
+    border-radius: 1vh;
 }
