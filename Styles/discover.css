@@ -1,11 +1,35 @@
 .series1 {
+    position: relative;
     width: 28vh;
     height: 42vh;
     background-image: url('..\\Assets\\Pictures\\Posters\\CBB.jpg');
     background-size: cover;
     border-radius: 1vh;
+    cursor: pointer;
 }
 
 .allwatchlist {
-    margin-top: 5vh;
+    padding-top: 4vh;
+}
+
+.bg-transparent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    transition: .2s;
+    pointer-events: none;
+    background: rgba(52,19,71,0.2);
+    background: -moz-linear-gradient(top, rgba(52,19,71,0.2) 0%, rgba(52,19,71,0.72) 25%, rgba(52,19,71,0.82) 53%, rgba(52,19,71,0.95) 90%, rgba(52,19,71,0.95) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(52,19,71,0.2)), color-stop(25%, rgba(52,19,71,0.72)), color-stop(53%, rgba(52,19,71,0.82)), color-stop(90%, rgba(52,19,71,0.95)), color-stop(100%, rgba(52,19,71,0.95)));
+    background: -webkit-linear-gradient(top, rgba(52,19,71,0.2) 0%, rgba(52,19,71,0.72) 25%, rgba(52,19,71,0.82) 53%, rgba(52,19,71,0.95) 90%, rgba(52,19,71,0.95) 100%);
+    background: -o-linear-gradient(top, rgba(52,19,71,0.2) 0%, rgba(52,19,71,0.72) 25%, rgba(52,19,71,0.82) 53%, rgba(52,19,71,0.95) 90%, rgba(52,19,71,0.95) 100%);
+    background: -ms-linear-gradient(top, rgba(52,19,71,0.2) 0%, rgba(52,19,71,0.72) 25%, rgba(52,19,71,0.82) 53%, rgba(52,19,71,0.95) 90%, rgba(52,19,71,0.95) 100%);
+    background: linear-gradient(to bottom, rgba(52,19,71,0.2) 0%, rgba(52,19,71,0.72) 25%, rgba(52,19,71,0.82) 53%, rgba(52,19,71,0.95) 90%, rgba(52,19,71,0.95) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#341347', endColorstr='#341347', GradientType=0 );
+}
+
+.series1:hover .bg-transparent{
+    height: 100%;
 }
