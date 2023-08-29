@@ -13,8 +13,3 @@ function SwitchEp(el) {
     el.style.color = "#FFFFFF";
 }
 
-import { WebExtensionBlocker } from '@cliqz/adblocker-webextension';
-
-WebExtensionBlocker.fromPrebuiltAdsAndTracking().then((blocker) => {
-  blocker.enableBlockingInBrowser(browser);
-});
