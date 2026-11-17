@@ -12,4 +12,3 @@ function SwitchEp(el) {
     el.style.backgroundColor = "rgb(38, 18, 56)";
     el.style.color = "#FFFFFF";
 }
-
