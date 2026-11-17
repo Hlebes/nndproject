@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NND - Ковбой Бибоп</title>
+    
+    <!-- ——— SEO И ИНДЕКСАЦИЯ ——— -->
+    <title>Ковбой Бибоп — смотреть онлайн в озвучке NoNameDUB Project</title>
+    <meta name="description" content="Смотреть аниме Ковбой Бибоп (Cowboy Bebop) 1998 года онлайн в качественной озвучке NoNameDUB Project. Все серии в 720p, без рекламы и в хорошем качестве.">
+    <meta name="keywords" content="Ковбой Бибоп, Cowboy Bebop, смотреть аниме, NoNameDUB Project, аниме онлайн, Спайк Шпигель, 1998">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="video.tv_show">
+    <meta property="og:title" content="Ковбой Бибоп — смотреть онлайн в озвучке NoNameDUB Project">
+    <meta property="og:description" content="Джаз, нуар и космический вестерн. Все серии в озвучке NoNameDUB Project.">
+    <meta property="og:image" content="https://nndproject.vercel.app/Assets/Pictures/Posters/CBB.jpg">
+    <meta property="og:url" content="https://nndproject.vercel.app/CBB.html">
+    <meta property="og:site_name" content="NoNameDUB Project">
+
+    <!-- ——— ШРИФТЫ ——— -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg: #0a080d;
@@ -36,7 +52,6 @@
             flex-direction: column;
         }
 
-        /* Тонкая текстура */
         body::before {
             content: "";
             position: fixed;
@@ -73,7 +88,6 @@
             color: var(--text);
         }
 
-        /* Логотип без каких-либо фильтров */
         .brand-logo {
             height: 48px;
             width: auto;
@@ -336,7 +350,6 @@
             align-items: center;
         }
 
-        /* Убрал фильтр, чтобы логотипы студий отображались в оригинале */
         .studioslogos img {
             height: 24px;
             object-fit: contain;
@@ -431,9 +444,10 @@
 
     <header>
         <div class="topline">
+            <!-- Ссылка на главную страницу -->
             <a href="index.html" class="brand">
-                <!-- Ваш оригинальный путь к логотипу -->
-                <img src="..\Assets\Pictures\Logos\ND.png" alt="NoNameDUB Logo" class="brand-logo">
+                <!-- Правильный относительный путь к логотипу -->
+                <img src="Assets/Pictures/Logos/ND.png" alt="NoNameDUB Logo" class="brand-logo">
                 <div class="brand-text">
                     <span class="brand-mark">NoNameDUB</span>
                     <span class="brand-sub">Project</span>
@@ -455,16 +469,16 @@
         <h1>Ковбой <span>Бибоп</span></h1>
         <p>
             Джаз, нуар и космический вестерн в одной из самых стильных аниме-классик.
-            Выберите серию и озвучку прямо в плеере ниже.
+            Все серии доступны в озвучке NoNameDUB Project.
         </p>
     </section>
 
     <main class="player-section">
         <div class="player-shell">
             <div class="player-frame">
-                <!-- Рабочий плеер -->
+                <!-- Рабочий плеер с вашей озвучкой -->
                 <iframe
-                    src="https://kodikplayer.com/serial/48950/9e1ff0a3a8fda833385f319cfecbc6ab/720p"
+                    src="https://kodikplayer.com/serial/48950/9e1ff0a3a8fda833385f319cfecbc6ab/720p?only_translations=2590"
                     width="610"
                     height="370"
                     frameborder="0"
@@ -474,7 +488,7 @@
                 ></iframe>
             </div>
             <div class="player-note">
-                <div class="hint">Управление сериями и озвучкой находится внутри самого плеера.</div>
+                <div class="hint">Управление сериями находится внутри плеера.</div>
                 <div>720p · NoNameDUB Project</div>
             </div>
         </div>
@@ -486,8 +500,8 @@
 
     <!-- Блок с информацией о сериале -->
     <section class="serieslending">
-        <!-- Оригинальный путь к постеру -->
-        <img class="seriesposter" src="..\Assets\Pictures\Posters\CBB.jpg" alt="Постер Ковбой Бибоп">
+        <!-- Правильный относительный путь к постеру -->
+        <img class="seriesposter" src="Assets/Pictures/Posters/CBB.jpg" alt="Постер Ковбой Бибоп">
         <div class="seriesdescription">
             <div class="generalinfo">
                 <div class="infotitle">
@@ -496,9 +510,9 @@
                     <h3 class="seriesyear">1998</h3>
                 </div>
                 <div class="studioslogos">
-                    <!-- Оригинальные пути к логотипам студий -->
-                    <img src="..\Assets\Pictures\Studios\Sunrise.png" alt="Sunrise">
-                    <img src="..\Assets\Pictures\Studios\BANDAI.svg" alt="Bandai">
+                    <!-- Правильные относительные пути к логотипам студий -->
+                    <img src="Assets/Pictures/Studios/Sunrise.png" alt="Sunrise">
+                    <img src="Assets/Pictures/Studios/BANDAI.svg" alt="Bandai">
                 </div>
             </div>
             
