@@ -1,126 +1,455 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="..\Styles\main.css" />
-        <link rel="stylesheet" type="text/css" href="..\Styles\swiperjs.css" />
-        <link rel="stylesheet" type="text/css" href="..\Styles\mainmobile.css" />
-        <link rel="stylesheet" type="text/css" href="..\Styles\montserratfont.css" />
-        <link rel="stylesheet" type="text/css" href="..\Styles\loader.css" />
-        <link rel="icon" href="..\Assets\Pictures\Logos\ND.png">
-        <title>NND - Главная</title>
-    </head>
-    <body onload="LoadOff()">
-        <div id="loader"></div>
-        <div id="wholecontent" style="display: none;">
-            <div class="trailerbtn" onclick="CloseTrailer()">
-                <img src="..\Assets\Pictures\UI\cross.svg">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ——— SEO И ИНДЕКСАЦИЯ ——— -->
+    <title>NoNameDUB Project — Смотреть аниме онлайн</title>
+    <meta name="description" content="Онлайн-кинотеатр NoNameDUB Project. Смотрите любимое аниме в качественной озвучке без рекламы.">
+    <meta name="keywords" content="аниме, смотреть аниме, NoNameDUB Project, онлайн-кинотеатр, Ковбой Бибоп">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NoNameDUB Project — Смотреть аниме онлайн">
+    <meta property="og:description" content="Качественная озвучка, удобный плеер и атмосферный дизайн.">
+    <meta property="og:image" content="https://nndproject.vercel.app/Assets/Pictures/Logos/ND.png">
+    <meta property="og:url" content="https://nndproject.vercel.app/">
+    <meta property="og:site_name" content="NoNameDUB Project">
+
+    <!-- ——— ШРИФТЫ ——— -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0a080d;
+            --surface: #13101a;
+            --surface-2: #1c1725;
+            --line: #2f2640;
+            --text: #f0edf5;
+            --muted: #8b809e;
+            --brand-pink: #c61a8c;
+            --brand-purple: #461c68;
+            --bebop-yellow: #e3b23c;
+            --radius: 18px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background:
+                radial-gradient(circle at 15% 0%, rgba(70,28,104,.4), transparent 45%),
+                radial-gradient(circle at 85% 100%, rgba(198,26,140,.1), transparent 40%),
+                var(--bg);
+            color: var(--text);
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            line-height: 1.55;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .03;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+        }
+
+        /* ——— ШАПКА ——— */
+        header {
+            padding: 24px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .topline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .brand-logo {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-mark {
+            font-family: "Bebas Neue", Impact, sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: .08em;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .brand-sub {
+            font-size: .7rem;
+            color: var(--muted);
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        /* Кнопка "Смотреть" не работает, но реагирует на наведение */
+        .nav-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--brand-pink);
+        }
+
+        .nav-menu a.disabled-link {
+            cursor: default; /* Убираем курсор-руку */
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ——— ГЛАВНЫЙ БАННЕР (HERO) ——— */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            padding: 40px 24px;
+            background-image: url('Assets/Pictures/Backgrounds/CBB_bg.jpg'); /* Сюда можно положить фон */
+            background-size: cover;
+            background-position: center 20%;
+            border-bottom: 1px solid var(--line);
+            margin-top: -85px; /* Наезд под шапку */
+            padding-top: 120px;
+        }
+
+        /* Градиент, чтобы текст читался на любом фоне */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(10,8,13,0.95) 0%, rgba(10,8,13,0.8) 40%, transparent 100%),
+                        linear-gradient(to top, var(--bg) 0%, transparent 30%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero-kicker {
+            font-size: .72rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--bebop-yellow);
+            margin-bottom: 14px;
+        }
+
+        .hero h1 {
+            font-family: "Bebas Neue", Impact, sans-serif;
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            line-height: .92;
+            letter-spacing: .02em;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 18px;
+            max-width: 600px;
+        }
+
+        .hero h1 span {
+            color: var(--brand-pink);
+            text-shadow: 0 0 20px rgba(198,26,140,.3);
+        }
+
+        .hero p {
+            max-width: 500px;
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        /* ——— КНОПКИ ——— */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--brand-pink);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(198,26,140,.3);
+        }
+
+        .btn-primary:hover {
+            background: #e01da0;
+            box-shadow: 0 0 25px rgba(198,26,140,.5);
+            transform: translateY(-2px);
+        }
+
+        /* Стили для неактивной кнопки */
+        .btn-disabled {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--muted);
+            border-color: var(--line);
+            cursor: not-allowed;
+            pointer-events: none; /* Отключает клики и ховер-эффекты */
+            opacity: 0.7;
+        }
+
+        /* ——— КАТАЛОГ ——— */
+        .catalog-section {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        .catalog-title {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .catalog-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: var(--line);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .anime-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(198,26,140,.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        .card-poster {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .card-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .card-year {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .card-content .btn {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* ——— ПОДВАЛ ——— */
+        footer {
+            margin-top: auto;
+            padding: 36px 24px 32px;
+            border-top: 1px solid var(--line);
+            max-width: 1200px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: .72rem;
+            color: var(--muted);
+        }
+
+        footer .tagline {
+            font-family: "Bebas Neue", Impact, sans-serif;
+            letter-spacing: .1em;
+            color: var(--bebop-yellow);
+            font-size: .95rem;
+        }
+
+        /* ——— АДАПТИВ ——— */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .hero { min-height: 400px; padding-top: 100px; }
+            .hero p { font-size: 0.9rem; }
+            .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+            .card-title { font-size: 1rem; }
+            footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="topline">
+            <a href="index.html" class="brand">
+                <!-- Путь к логотипу -->
+                <img src="Assets/Pictures/Logos/ND.png" alt="NoNameDUB Logo" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-mark">NoNameDUB</span>
+                    <span class="brand-sub">Project</span>
+                </div>
+            </a>
+            <div class="nav-menu">
+                <!-- Кнопка "Смотреть" не работает, но ховер-эффект работает -->
+                <a href="#" onclick="return false;" class="disabled-link">Смотреть</a>
+                <a href="#" onclick="return false;">Закладки</a>
+                <a href="#" onclick="return false;">История</a>
             </div>
-            <iframe class="trailer "src="https://www.youtube.com/embed/tAwdYeKUvFM">
-            </iframe>
-            <div class="menupanel">
-                <div class="wrapper navpanel">
-                    <a href="index.html" id="topmenulogo">
-                        <div id="topmenulogoimg">
-                            <img src="..\Assets\Pictures\Logos\ND.png">
-                        </div>
-                        <H2>NoNameDUB<br>Project</H2>
-                    </a>
-                    <div id="topmenu">
-                        <a href="discover.html">
-                            <div class="topmenubtn">
-                                <label>Смотреть</label>
-                                <div class="hoverline"></div>
-                            </div>
-                        </a>
-                        <div class="topmenubtn">
-                            <label>Закладки</label>
-                            <div class="hoverline"></div>
-                        </div>
-                        <div class="topmenubtn">
-                            <label>История</label>
-                            <div class="hoverline"></div>
-                        </div>
-                    </div>
-                    <div id="authmenu">
-                        <div id="topauth">
-                        </div>
-                        <label>Nickname</label>
-                    </div>
-                </div>
-            </div>
-            <div class="page animate-bottom">
-                <div class="mainseries">
-                    <div class="contentbox">
-                        <div class="thumbnail">
-                            <style>
-                                .thumbnail {
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 100%;
-                                    background-image: url('..\\Assets\\Pictures\\Thumbnails\\CBB_thumb.jpg');
-                                    background-size: cover;
-                                    /* background-repeat: no-repeat; */
-                                }
-                            </style>
-                        </div>
-                        <iframe class="maintrailer"
-                            src="https://www.youtube.com/embed/tAwdYeKUvFM">
-                        </iframe>
-                    </div>
-                    <div class="description">
-                        <div class="logobox">
-                            <img src="..\Assets\Pictures\Logos\Anime\logo.png">
-                            <h5>COWBOY BEBOP / КОВБОЙ БИБОП (1998)</h5>
-                        </div>
-                        <div class="textbox">
-                            Бывший полицейский Джет Блэк и человек с тёмным прошлым Спайк Шпигель совершенно не планировали увеличивать экипаж космического корабля «Бибоп», являющегося для них домом и средством передвижения. Но сети, раскинутые для поимки дорогостоящих отбросов общества, принесли им Фэй Валентайн — очаровательную картёжницу с колоссальным долгом, Эд — потерявшуюся компьютерную умницу и Эйн — предположительно, самую умную собаку на свете. Именно в таком составе экипаж «Бибопа» и продолжает своё дело — охоту за головами.
-                        </div>
-                        <a class="link" href="CBB.html">Смотреть онлайн</a>
-                    </div>
-                </div>
-                <div class="wrapper addseries">
-                    <div class="swiper mySwiper" style="padding: 2vh; margin-left: -4vh;">
-                        <div class="swiper-wrapper">
-                            <!-- В слайды вставлять это:
-                            <label class="bannerinfo series2thumb">Обложка</label><label class="bannerinfo series2logo">Лого</label><label class="bannerinfo series2desctext">Описание</label><label class="bannerinfo link">ссылка.html</label>-->
-                        <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Thumbnails\\CSM.webp</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\CSM.png</label><label class="bannerinfo series2desctext">Мальчик, потерявший всё, обретает силу демона и прорывает путь к своему счастью.</label><label class="bannerinfo link">CSM.html</label><div class="bannerinfo series2trailer">https://www.youtube.com/embed/l96zmDlWCBk</div><img src="..\Assets\Pictures\Thumbnails\CSM_thumb.jpg"></div>
-                        <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Posters\\TriSt.jpg</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\trist.svg</label><label class="bannerinfo series2desctext">Двое репортёров оказываются на ничейной земле, и встреча с преступником стоимостью 60 миллонов двойных долларов меняет их жизнь.</label><label class="bannerinfo link">TriSt.html</label><div class="bannerinfo series2trailer">https://www.youtube.com/embed/dQw4w9WgXcQ</div><img src="..\Assets\Pictures\Thumbnails\TriSt_thumb.jpg"></div>
-                        <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Thumbnails\\KenAsh_thumb.jpg</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\KenAsh.png</label><label class="bannerinfo series2desctext">Один старик оказывается втянут в гладиаторские поединки корпораций, за право принимать решения на рынке.</label><label class="bannerinfo link">KenAsh.html</label><img src="..\Assets\Pictures\Thumbnails\KenAsh_thumb.jpg"></div>
-                        <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Thumbnails\\tekken.png</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\Tekken2.png</label><label class="bannerinfo series2desctext">Описание</label><label class="bannerinfo link">ссылка.html</label><img src="..\Assets\Pictures\Thumbnails\tekken.png"></div>
-                        <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Posters\\NNKX2.jpg</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\NNKX.png</label><label class="bannerinfo series2desctext">Акира Цубаки заболел загадочной болезнью. Её причиной оказалась не менее загадочная новенькая из класса, Урабе Микото. Она быстро поняла как бороться с этой болезнью, и Акира проходит курс лечения.</label><label class="bannerinfo link">NNKX.html</label><img src="..\Assets\Pictures\Thumbnails\NNKX.jpg"></div>
-                        <div class="swiper-slide" onclick="SwitchBanner(this)"><label class="bannerinfo series2thumb">..\\Assets\\Pictures\\Thumbnails\\rec.jpeg</label><label class="bannerinfo series2logo">..\Assets\Pictures\Logos\Anime\rec.png</label><label class="bannerinfo series2desctext">Онда Ака и Фумихико Мацумару встречаются при необычных обстоятельствах, она напросилась идти с ним в кино, объясняя это тем, что она мечтает озвучивать роли Одри Хэпбёрн. Но у Аки сгорел дом, и начинать приходится с озвучки рекламы чипсов.</label><label class="bannerinfo link">REC.html</label><img src="..\Assets\Pictures\Thumbnails\rec.jpeg"></div>
-                        <div class="swiper-slide"><label>Будет ещё!<label></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <script src="..\Scripts\swiperscript.js"></script>
-                    <script>
-                        var swiper = new Swiper(".mySwiper", {
-                        slidesPerView: 5,
-                        spaceBetween: 30,
-                        freeMode: true,
-                        });
-                    </script>
-                    <link rel="stylesheet" type="text/css" href="..\Styles\swiper.css" />
-                    <div id="series2">
-                        <div class="bggradient"></div>
-                        <div class="bgcontent" style="background-image: url('..\\Assets\\Pictures\\Thumbnails\\CSM.webp');"></div>
-                        <div class="series2desc">
-                            <a class="series2logowrapper" href="CSM.html">
-                                <img class="series2logo" onerror="RemoveCover()" onload="RemoveCover()" src="..\Assets\Pictures\Logos\Anime\CSM.png">
-                            </a>
-                            <label class="series2desctext">Мальчик, потерявший всё, обретает силу демона и прорывает путь к своему счастью.</label>
-                            <div class="series2btns">
-                                <a class="link" href="CSM.html">Смотреть онлайн</a>
-                                <div class="series2trailer" value="https://www.youtube.com/embed/tAwdYeKUvFM" onclick="ShowTrailer(this);">Трейлер</div>
-                            </div>
-                        </div>
-                        <div id="viewcover" style="background-color: rgb(11, 6, 17);"></div>
-                    </div>
-                </div>
+            <div class="user-profile">
+                <span>Nickname</span>
             </div>
         </div>
-        <script src="..\Scripts\switchbanner.js"></script>
-        <script src="..\Scripts\loader.js"></script>
-    </body>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-kicker">Рекомендуем к просмотру</div>
+            <h1>Ковбой <span>Бибоп</span></h1>
+            <p>
+                Джаз, нуар и космический вестерн в одной из самых стильных аниме-классик. 
+                Экипаж корабля «Бибоп» отправляется на охоту за головами.
+            </p>
+            <!-- РАБОЧАЯ КНОПКА -->
+            <a href="CBB.html" class="btn btn-primary">Смотреть онлайн ↗</a>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <main class="catalog-section">
+        <div class="catalog-title">Все сериалы</div>
+        
+        <div class="catalog-grid">
+            
+            <!-- Карточка 1: Ковбой Бибоп (РАБОЧАЯ) -->
+            <div class="anime-card">
+                <img src="Assets/Pictures/Posters/CBB.jpg" alt="Ковбой Бибоп" class="card-poster">
+                <div class="card-content">
+                    <div class="card-title">Ковбой Бибоп</div>
+                    <div class="card-year">1998 • 26 эп.</div>
+                    <a href="CBB.html" class="btn btn-primary">Смотреть</a>
+                </div>
+            </div>
+
+            <!-- Карточка 2: Человек-бензопила (НЕРАБОЧАЯ) -->
+            <div class="anime-card">
+                <!-- Вставьте сюда путь к постеру Бензопилы (я указал заглушку) -->
+                <img src="Assets/Pictures/Posters/CSM.jpg" alt="Человек-бензопила" class="card-poster">
+                <div class="card-content">
+                    <div class="card-title">Человек-бензопила</div>
+                    <div class="card-year">2022 • 12 эп.</div>
+                    <!-- Кнопка не работает -->
+                    <button class="btn btn-disabled" disabled>Скоро</button>
+                </div>
+            </div>
+
+            <!-- Карточка 3: Заглушка (НЕРАБОЧАЯ) -->
+            <div class="anime-card">
+                <div style="width: 100%; aspect-ratio: 3/4; background: var(--surface-2); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line);">
+                    <span style="font-size: 3rem; color: var(--line);">+</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Новый проект</div>
+                    <div class="card-year">Анонс</div>
+                    <button class="btn btn-disabled" disabled>Ожидается</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="tagline">See You Space Cowboy...</div>
+        <div>© NoNameDUB Project · 2024</div>
+    </footer>
+
+</body>
 </html>
