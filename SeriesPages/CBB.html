@@ -64,7 +64,7 @@
 
         /* ——— ШАПКА ——— */
         header {
-            padding: 24px;
+            padding: 16px 24px; /* Уменьшен отступ сверху/снизу */
             max-width: 1040px;
             width: 100%;
             margin: 0 auto;
@@ -77,7 +77,7 @@
             gap: 16px;
             flex-wrap: wrap;
             border-bottom: 1px solid var(--line);
-            padding-bottom: 20px;
+            padding-bottom: 16px; /* Уменьшен отступ */
         }
 
         .brand {
@@ -89,7 +89,7 @@
         }
 
         .brand-logo {
-            height: 48px;
+            height: 40px; /* Чуть уменьшен логотип в шапке */
             width: auto;
             object-fit: contain;
         }
@@ -140,41 +140,105 @@
             font-size: 0.95rem;
         }
 
-        /* ——— ЗАГОЛОВОК ——— */
+        /* ——— НАВИГАЦИОННАЯ ПАНЕЛЬ ——— */
         .hero {
             max-width: 1040px;
             width: 100%;
             margin: 0 auto;
-            padding: 48px 24px 28px;
+            padding: 10px 24px 20px; /* Уменьшен отступ */
         }
 
+        .hero-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Уменьшен отступ под навигацией */
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--brand-pink);
+        }
+
+        .back-btn svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* Хлебные крошки */
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .breadcrumbs a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--text);
+        }
+
+        .breadcrumbs .current {
+            color: var(--text);
+        }
+
+        .breadcrumbs .sep {
+            color: var(--line);
+        }
+
+        /* ——— ЗАГОЛОВОК (ЛОГОТИП) ——— */
         .hero-kicker {
             font-size: .72rem;
             letter-spacing: .22em;
             text-transform: uppercase;
             color: var(--bebop-yellow);
-            margin-bottom: 14px;
+            margin-bottom: 10px; /* Уменьшен отступ */
+            text-align: center; 
         }
 
-        .hero h1 {
-            font-family: "Bebas Neue", Impact, sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: .92;
-            letter-spacing: .02em;
-            font-weight: 400;
-            color: var(--text);
-            margin-bottom: 18px;
+        .hero-title {
+            margin: 0 auto 16px auto; 
+            line-height: 0; 
+            text-align: center;
         }
 
-        .hero h1 span {
-            color: var(--brand-pink);
-            text-shadow: 0 0 20px rgba(198,26,140,.3);
+        .hero-logo {
+            max-width: 100%;
+            width: 450px; /* УМЕНЬШЕН ЛОГОТИП (было 700px) */
+            height: auto;
+            display: inline-block;
         }
 
         .hero p {
             max-width: 620px;
             color: var(--muted);
-            font-size: .98rem;
+            font-size: .95rem;
+            margin: 0 auto; 
+            text-align: center;
         }
 
         /* ——— ПЛЕЕР ——— */
@@ -314,9 +378,10 @@
         .generalinfo {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 16px;
+            align-items: flex-end;
+            margin-bottom: 20px;
             gap: 16px;
+            flex-wrap: wrap;
         }
 
         .infotitle {
@@ -346,13 +411,16 @@
 
         .studioslogos {
             display: flex;
-            gap: 12px;
+            gap: 16px;
             align-items: center;
+            padding-bottom: 4px;
         }
 
         .studioslogos img {
-            height: 24px;
+            height: 20px;
+            width: auto;
             object-fit: contain;
+            opacity: 0.9;
         }
 
         .desctext {
@@ -428,13 +496,15 @@
             .serieslending { flex-direction: column; align-items: center; }
             .seriesposter { width: 100%; max-width: 300px; }
             .generalinfo { flex-direction: column; align-items: center; text-align: center; }
+            .studioslogos { margin-top: 10px; justify-content: center; }
             .staff { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 16px; align-items: center; }
         }
 
         @media (max-width: 768px) {
             .nav-menu { display: none; }
             header, .hero, .player-section, .serieslending { padding-left: 16px; padding-right: 16px; }
-            .hero { padding-top: 32px; }
+            .hero { padding-top: 10px; }
+            .hero-logo { width: 100%; } 
             .seriesdescription { padding: 16px; }
             footer { flex-direction: column; }
         }
@@ -444,17 +514,15 @@
 
     <header>
         <div class="topline">
-            <!-- Ссылка на главную страницу -->
-            <a href="index.html" class="brand">
-                <!-- Правильный относительный путь к логотипу -->
-                <img src="Assets/Pictures/Logos/ND.png" alt="NoNameDUB Logo" class="brand-logo">
+            <a href="../index.html" class="brand">
+                <img src="../Assets/Pictures/Logos/ND.png" alt="NoNameDUB Logo" class="brand-logo">
                 <div class="brand-text">
                     <span class="brand-mark">NoNameDUB</span>
                     <span class="brand-sub">Project</span>
                 </div>
             </a>
             <div class="nav-menu">
-                <a href="discover.html">Смотреть</a>
+                <a href="#">Смотреть</a>
                 <a href="#">Закладки</a>
                 <a href="#">История</a>
             </div>
@@ -465,8 +533,28 @@
     </header>
 
     <section class="hero">
+        <div class="hero-nav">
+            <a href="../index.html" class="back-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Назад на главную
+            </a>
+            
+            <div class="breadcrumbs">
+                <a href="../index.html">Каталог</a>
+                <span class="sep">/</span>
+                <span class="current">Ковбой Бибоп</span>
+            </div>
+        </div>
+
         <div class="hero-kicker">See You Space Cowboy</div>
-        <h1>Ковбой <span>Бибоп</span></h1>
+        
+        <h1 class="hero-title">
+            <img src="../Assets/Pictures/Logos/Anime/logo.png" alt="Ковбой Бибоп" class="hero-logo">
+        </h1>
+        
         <p>
             Джаз, нуар и космический вестерн в одной из самых стильных аниме-классик.
             Все серии доступны в озвучке NoNameDUB Project.
@@ -476,7 +564,6 @@
     <main class="player-section">
         <div class="player-shell">
             <div class="player-frame">
-                <!-- Рабочий плеер с вашей озвучкой -->
                 <iframe
                     src="https://kodikplayer.com/serial/48950/9e1ff0a3a8fda833385f319cfecbc6ab/720p?only_translations=2590"
                     width="610"
@@ -498,10 +585,8 @@
         </a>
     </main>
 
-    <!-- Блок с информацией о сериале -->
     <section class="serieslending">
-        <!-- Правильный относительный путь к постеру -->
-        <img class="seriesposter" src="Assets/Pictures/Posters/CBB.jpg" alt="Постер Ковбой Бибоп">
+        <img class="seriesposter" src="../Assets/Pictures/Posters/CBB.jpg" alt="Постер Ковбой Бибоп">
         <div class="seriesdescription">
             <div class="generalinfo">
                 <div class="infotitle">
@@ -510,9 +595,8 @@
                     <h3 class="seriesyear">1998</h3>
                 </div>
                 <div class="studioslogos">
-                    <!-- Правильные относительные пути к логотипам студий -->
-                    <img src="Assets/Pictures/Studios/Sunrise.png" alt="Sunrise">
-                    <img src="Assets/Pictures/Studios/BANDAI.svg" alt="Bandai">
+                    <img src="../Assets/Pictures/Studios/Sunrise.png" alt="Sunrise">
+                    <img src="../Assets/Pictures/Studios/BANDAI.svg" alt="Bandai">
                 </div>
             </div>
             
@@ -533,7 +617,7 @@
             </div>
 
             <div class="workprogress">
-                <label>В работе: 14/26 серий</label>
+                <label>Закончен</label>
             </div>
         </div>
     </section>
