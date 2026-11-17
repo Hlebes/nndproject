@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NND - Ковбой Бибоп</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a080d;
+            --surface: #13101a;
+            --surface-2: #1c1725;
+            --line: #2f2640;
+            --text: #f0edf5;
+            --muted: #8b809e;
+            --brand-pink: #c61a8c;
+            --brand-purple: #461c68;
+            --bebop-yellow: #e3b23c;
+            --radius: 18px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background:
+                radial-gradient(circle at 15% 0%, rgba(70,28,104,.4), transparent 45%),
+                radial-gradient(circle at 85% 100%, rgba(198,26,140,.1), transparent 40%),
+                var(--bg);
+            color: var(--text);
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            line-height: 1.55;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Тонкая текстура */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .03;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+        }
+
+        /* ——— ШАПКА ——— */
+        header {
+            padding: 24px;
+            max-width: 1040px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .topline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        /* Логотип без каких-либо фильтров */
+        .brand-logo {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-mark {
+            font-family: "Bebas Neue", Impact, sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: .08em;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .brand-sub {
+            font-size: .7rem;
+            color: var(--muted);
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--brand-pink);
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ——— ЗАГОЛОВОК ——— */
+        .hero {
+            max-width: 1040px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 48px 24px 28px;
+        }
+
+        .hero-kicker {
+            font-size: .72rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--bebop-yellow);
+            margin-bottom: 14px;
+        }
+
+        .hero h1 {
+            font-family: "Bebas Neue", Impact, sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: .92;
+            letter-spacing: .02em;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: var(--brand-pink);
+            text-shadow: 0 0 20px rgba(198,26,140,.3);
+        }
+
+        .hero p {
+            max-width: 620px;
+            color: var(--muted);
+            font-size: .98rem;
+        }
+
+        /* ——— ПЛЕЕР ——— */
+        .player-section {
+            max-width: 1040px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 24px 32px;
+        }
+
+        .player-shell {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: 0 30px 80px rgba(0,0,0,.8), 0 0 40px rgba(198,26,140,.1);
+            overflow: hidden;
+            transition: border-color .3s ease;
+        }
+
+        .player-shell:hover {
+            border-color: rgba(198,26,140,.4);
+        }
+
+        .player-shell::before {
+            content: "";
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand-pink), var(--brand-purple), var(--bebop-yellow));
+            opacity: .9;
+        }
+
+        .player-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .player-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+            z-index: 1;
+        }
+
+        .player-note {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 12px 18px;
+            border-top: 1px solid var(--line);
+            background: var(--surface-2);
+            font-size: .72rem;
+            color: var(--muted);
+        }
+
+        .player-note .hint {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-note .hint::before {
+            content: "i";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--brand-pink);
+            color: #fff;
+            font-family: serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        .fallback-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 20px;
+            background: transparent;
+            color: var(--brand-pink);
+            border: 1px solid var(--brand-pink);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: .85rem;
+            font-weight: 500;
+            transition: all .2s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .fallback-btn:hover {
+            background: var(--brand-pink);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(198,26,140,.4);
+        }
+
+        /* ——— ИНФОРМАЦИЯ О СЕРИАЛЕ ——— */
+        .serieslending {
+            max-width: 1040px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 24px 64px;
+            display: flex;
+            gap: 32px;
+        }
+
+        .seriesposter {
+            width: 260px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            aspect-ratio: 3 / 4;
+            border: 1px solid var(--line);
+        }
+
+        .seriesdescription {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+
+        .generalinfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            gap: 16px;
+        }
+
+        .infotitle {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .seriestitle {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2.5rem;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .seriesorigtitle {
+            color: var(--brand-pink);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .seriesyear {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .studioslogos {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        /* Убрал фильтр, чтобы логотипы студий отображались в оригинале */
+        .studioslogos img {
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .desctext {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .staff {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            border-left: 3px solid var(--brand-pink);
+            padding-left: 16px;
+        }
+
+        .staffdiv {
+            display: flex;
+            gap: 4px;
+        }
+
+        .staffdiv label:first-child {
+            color: var(--muted);
+        }
+
+        .staffdiv label:last-child {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .workprogress {
+            margin-top: auto;
+            display: inline-block;
+            align-self: flex-start;
+            background: rgba(198, 26, 140, 0.1);
+            border: 1px solid rgba(198, 26, 140, 0.3);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--brand-pink);
+            font-size: 0.9rem;
+        }
+
+        /* ——— ПОДВАЛ ——— */
+        footer {
+            margin-top: auto;
+            padding: 36px 24px 32px;
+            border-top: 1px solid var(--line);
+            max-width: 1040px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+            font-size: .72rem;
+            color: var(--muted);
+        }
+
+        footer .tagline {
+            font-family: "Bebas Neue", Impact, sans-serif;
+            letter-spacing: .1em;
+            color: var(--bebop-yellow);
+            font-size: .95rem;
+        }
+
+        /* ——— АДАПТИВ ——— */
+        @media (max-width: 900px) {
+            .serieslending { flex-direction: column; align-items: center; }
+            .seriesposter { width: 100%; max-width: 300px; }
+            .generalinfo { flex-direction: column; align-items: center; text-align: center; }
+            .staff { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 16px; align-items: center; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            header, .hero, .player-section, .serieslending { padding-left: 16px; padding-right: 16px; }
+            .hero { padding-top: 32px; }
+            .seriesdescription { padding: 16px; }
+            footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="topline">
+            <a href="index.html" class="brand">
+                <!-- Ваш оригинальный путь к логотипу -->
+                <img src="..\Assets\Pictures\Logos\ND.png" alt="NoNameDUB Logo" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-mark">NoNameDUB</span>
+                    <span class="brand-sub">Project</span>
+                </div>
+            </a>
+            <div class="nav-menu">
+                <a href="discover.html">Смотреть</a>
+                <a href="#">Закладки</a>
+                <a href="#">История</a>
+            </div>
+            <div class="user-profile">
+                <span>Nickname</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-kicker">See You Space Cowboy</div>
+        <h1>Ковбой <span>Бибоп</span></h1>
+        <p>
+            Джаз, нуар и космический вестерн в одной из самых стильных аниме-классик.
+            Выберите серию и озвучку прямо в плеере ниже.
+        </p>
+    </section>
+
+    <main class="player-section">
+        <div class="player-shell">
+            <div class="player-frame">
+                <!-- Рабочий плеер -->
+                <iframe
+                    src="https://kodikplayer.com/serial/48950/9e1ff0a3a8fda833385f319cfecbc6ab/720p"
+                    width="610"
+                    height="370"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="autoplay; fullscreen"
+                    title="Ковбой Бибоп — плеер"
+                ></iframe>
+            </div>
+            <div class="player-note">
+                <div class="hint">Управление сериями и озвучкой находится внутри самого плеера.</div>
+                <div>720p · NoNameDUB Project</div>
+            </div>
+        </div>
+
+        <a href="https://w.kdkonl.com/serial/48950/RzwY8a9e1ff0a3" target="_blank" rel="noopener" class="fallback-btn">
+            Открыть в новой вкладке, если видео не грузится ↗
+        </a>
+    </main>
+
+    <!-- Блок с информацией о сериале -->
+    <section class="serieslending">
+        <!-- Оригинальный путь к постеру -->
+        <img class="seriesposter" src="..\Assets\Pictures\Posters\CBB.jpg" alt="Постер Ковбой Бибоп">
+        <div class="seriesdescription">
+            <div class="generalinfo">
+                <div class="infotitle">
+                    <h1 class="seriestitle">Ковбой Бибоп</h1>
+                    <h3 class="seriesorigtitle">Cowboy Bebop</h3>
+                    <h3 class="seriesyear">1998</h3>
+                </div>
+                <div class="studioslogos">
+                    <!-- Оригинальные пути к логотипам студий -->
+                    <img src="..\Assets\Pictures\Studios\Sunrise.png" alt="Sunrise">
+                    <img src="..\Assets\Pictures\Studios\BANDAI.svg" alt="Bandai">
+                </div>
+            </div>
+            
+            <p class="desctext">
+                Бывший полицейский Джет Блэк и человек с тёмным прошлым Спайк Шпигель совершенно не планировали увеличивать экипаж космического корабля «Бибоп», являющегося для них домом и средством передвижения. Но сети, раскинутые для поимки дорогостоящих отбросов общества, принесли им Фэй Валентайн — очаровательную картёжницу с колоссальным долгом, Эд — потерявшуюся компьютерную умницу и Эйн — предположительно, самую умную собаку на свете. Именно в таком составе экипаж «Бибопа» и продолжает своё дело — охоту за головами.
+            </p>
+
+            <div class="staff">
+                <div class="staffdiv">
+                    <label>Автор идеи:</label> <label>Шинчиро Ватанабе</label>
+                </div>
+                <div class="staffdiv">
+                    <label>Сценарист:</label> <label>Кейко Нобумото</label>
+                </div>
+                <div class="staffdiv">
+                    <label>Композитор:</label> <label>Йоко Канно и Seatbelts</label>
+                </div>
+            </div>
+
+            <div class="workprogress">
+                <label>В работе: 14/26 серий</label>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="tagline">See You Space Cowboy...</div>
+        <div>Фан-оформление · Плеер предоставлен Kodik</div>
+    </footer>
+
+</body>
+</html>
