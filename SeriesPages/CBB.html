@@ -163,16 +163,16 @@
             border-radius: 50%;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.03);
+            /* Убираем старую серую рамку и фон */
+            border: 1px solid transparent; 
+            background: transparent;
         }
 
-        /* Стили для иконок (и SVG, и IMG) */
         .social-btn svg, 
         .social-btn img {
             width: 20px;
             height: 20px;
-            object-fit: contain; /* Чтобы картинка не искажалась */
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
 
@@ -181,33 +181,49 @@
             transform: scale(1.1);
         }
 
-        /* ВКонтакте (Официальный синий #0077FF) */
-        .social-btn.vk { color: #0077FF; }
+        /* ——— VK ——— */
+        .social-btn.vk {
+            background: rgba(0, 119, 255, 0.1);
+            border-color: rgba(0, 119, 255, 0.3);
+            color: #0077FF;
+        }
         .social-btn.vk:hover {
-            background: rgba(0, 119, 255, 0.15);
+            background: rgba(0, 119, 255, 0.2);
             border-color: #0077FF;
             box-shadow: 0 0 15px rgba(0, 119, 255, 0.4);
         }
 
-        /* Telegram (Официальный голубой #229ED9) */
-        .social-btn.tg { color: #229ED9; }
+        /* ——— Telegram ——— */
+        .social-btn.tg {
+            background: rgba(0, 136, 204, 0.1);
+            border-color: rgba(0, 136, 204, 0.3);
+            color: #0088CC;
+        }
         .social-btn.tg:hover {
-            background: rgba(34, 158, 217, 0.15);
-            border-color: #229ED9;
-            box-shadow: 0 0 15px rgba(34, 158, 217, 0.4);
+            background: rgba(0, 136, 204, 0.2);
+            border-color: #0088CC;
+            box-shadow: 0 0 15px rgba(0, 136, 204, 0.4);
         }
 
-        /* Discord (Официальный Blurple #5865F2) */
-        .social-btn.ds { color: #5865F2; }
+        /* ——— Discord ——— */
+        .social-btn.ds {
+            background: rgba(88, 101, 242, 0.1);
+            border-color: rgba(88, 101, 242, 0.3);
+            color: #5865F2;
+        }
         .social-btn.ds:hover {
-            background: rgba(88, 101, 242, 0.15);
+            background: rgba(88, 101, 242, 0.2);
             border-color: #5865F2;
             box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
         }
 
-        /* Boosty (Официальный оранжевый #F15F2C) */
+        /* ——— Boosty ——— */
+        .social-btn.boosty {
+            background: rgba(241, 95, 44, 0.1);
+            border-color: rgba(241, 95, 44, 0.3);
+        }
         .social-btn.boosty:hover {
-            background: rgba(241, 95, 44, 0.15);
+            background: rgba(241, 95, 44, 0.2);
             border-color: #F15F2C;
             box-shadow: 0 0 15px rgba(241, 95, 44, 0.4);
         }
