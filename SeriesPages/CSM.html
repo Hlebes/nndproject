@@ -64,10 +64,18 @@
 
         /* ——— ШАПКА ——— */
         header {
-            padding: 16px 24px; /* Уменьшен отступ */
-            max-width: 1040px;
+            max-height: 90px;
+            background:
+                radial-gradient(circle at 15% 0%, rgba(70,28,104,.4), transparent 45%),
+                radial-gradient(circle at 85% 100%, rgba(198,26,140,.1), transparent 40%),
+                var(--bg);
+            padding: 24px;
+            /* max-width: 1200px; */
             width: 100%;
             margin: 0 auto;
+            position: fixed;
+            z-index: 10;
+            border-bottom: 1px solid var(--line);
         }
 
         .topline {
@@ -76,7 +84,6 @@
             justify-content: space-between;
             gap: 16px;
             flex-wrap: wrap;
-            border-bottom: 1px solid var(--line);
             padding-bottom: 16px;
         }
 
@@ -228,6 +235,7 @@
 
         /* ——— НАВИГАЦИОННАЯ ПАНЕЛЬ ——— */
         .hero {
+            margin-top: 100px !important;
             max-width: 1040px;
             width: 100%;
             margin: 0 auto;

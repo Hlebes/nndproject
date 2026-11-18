@@ -70,12 +70,18 @@
 
         /* ——— ШАПКА ——— */
         header {
+            max-height: 90px;
+            background:
+                radial-gradient(circle at 15% 0%, rgba(70,28,104,.4), transparent 45%),
+                radial-gradient(circle at 85% 100%, rgba(198,26,140,.1), transparent 40%),
+                var(--bg);
             padding: 24px;
-            max-width: 1200px;
+            /* max-width: 1200px; */
             width: 100%;
             margin: 0 auto;
-            position: relative;
+            position: fixed;
             z-index: 10;
+            border-bottom: 1px solid var(--line);
         }
 
         .topline {
@@ -84,7 +90,6 @@
             justify-content: space-between;
             gap: 16px;
             flex-wrap: wrap;
-            border-bottom: 1px solid var(--line);
             padding-bottom: 20px;
         }
 
@@ -246,11 +251,12 @@
             display: flex;
             align-items: center;
             padding: 40px 24px;
-            background-image: url('Assets/Pictures/Backgrounds/CBB_bg.jpg'); /* Сюда можно положить фон */
+            background-image: url('Assets/Pictures/Thumbnails/CBB_thumb.jpg'); /* Сюда можно положить фон */
             background-size: cover;
             background-position: center 20%;
             border-bottom: 1px solid var(--line);
-            margin-top: -85px; /* Наезд под шапку */
+            margin-top: 35px;
+            /* margin-top: -85px; Наезд под шапку */
             padding-top: 120px;
         }
 
