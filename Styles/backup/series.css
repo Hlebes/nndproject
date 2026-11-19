@@ -1,0 +1,358 @@
+/* ——— НАВИГАЦИОННАЯ ПАНЕЛЬ ——— */
+.hero {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;padding: 130px 24px 20px;
+}
+
+.topline {
+    padding-bottom: 15px !important; /* Добавляем отступ снизу, чтобы шапка не слипалась с навигацией */
+}
+
+.hero-nav-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--line); /* Линия над навигацией */
+}
+
+.hero-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Элементы встанут по краям этой 1040px обертки */
+    width: 100%;
+    height: 20px;
+    max-width: 1040px;
+    padding-top: 15px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: var(--brand-pink);
+}
+
+.back-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover svg {
+    transform: translateX(-4px);
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.breadcrumbs a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--text);
+}
+
+.breadcrumbs .current {
+    color: var(--text);
+}
+
+.breadcrumbs .sep {
+    color: var(--line);
+}
+
+/* ——— ЗАГОЛОВОК (ЛОГОТИП) ——— */
+.hero-kicker {
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--bebop-yellow); 
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+.hero-title {
+    margin: 0 auto 16px auto; 
+    line-height: 0; 
+    text-align: center;
+}
+
+.hero-logo {
+    max-width: 100%;
+    width: 450px; 
+    height: auto;
+    display: inline-block;
+}
+
+.hero p {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: .95rem;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+/* ——— ПЛЕЕР ——— */
+.player-section {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 32px;
+}
+
+.player-shell {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 30px 80px rgba(0,0,0,.8), 0 0 40px rgba(198,26,140,.1);
+    overflow: hidden;
+    transition: border-color .3s ease;
+}
+
+.player-shell:hover {
+    border-color: rgba(198,26,140,.4);
+}
+
+.player-shell::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--brand-pink), var(--brand-purple), var(--bebop-yellow));
+    opacity: .9;
+}
+
+.player-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.player-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    z-index: 1;
+}
+
+.player-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px 18px;
+    border-top: 1px solid var(--line);
+    background: var(--surface-2);
+    font-size: .72rem;
+    color: var(--muted);
+}
+
+.player-note .hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player-note .hint::before {
+    content: "i";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--brand-pink);
+    color: #fff;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.fallback-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--brand-pink);
+    border: 1px solid var(--brand-pink);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: .85rem;
+    font-weight: 500;
+    transition: all .2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.fallback-btn:hover {
+    background: var(--brand-pink);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(198,26,140,.4);
+}
+
+/* ——— ИНФОРМАЦИЯ О СЕРИАЛЕ ——— */
+.serieslending {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+    display: flex;
+    gap: 32px;
+}
+
+.seriesposter {
+    width: 260px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    aspect-ratio: 3 / 4;
+    border: 1px solid var(--line);
+}
+
+.seriesdescription {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.generalinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.infotitle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.seriestitle {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.seriesorigtitle {
+    color: var(--brand-pink);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.seriesyear {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.studioslogos {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.studioslogos img {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.desctext {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.staff {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--brand-pink);
+    padding-left: 16px;
+}
+
+.staffdiv {
+    display: flex;
+    gap: 4px;
+}
+
+.staffdiv label:first-child {
+    color: var(--muted);
+}
+
+.staffdiv label:last-child {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.workprogress {
+    margin-top: auto;
+    display: inline-block;
+    align-self: flex-start;
+    background: rgba(198, 26, 140, 0.1);
+    border: 1px solid rgba(198, 26, 140, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--brand-pink);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .serieslending { flex-direction: column; align-items: center; }
+    .seriesposter { width: 100%; max-width: 300px; }
+    .generalinfo { flex-direction: column; align-items: center; text-align: center; }
+    .studioslogos { margin-top: 10px; justify-content: center; }
+    .staff { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 16px; align-items: center; }
+}
+
+@media (max-width: 768px) {
+    .hero-nav {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .hero { padding-top: 90px; }
+    .hero-logo { width: 100%; } 
+    .seriesdescription { padding: 16px; }
+}

@@ -1,0 +1,282 @@
+:root {
+    --bg: #0a080d;
+    --surface: #13101a;
+    --surface-2: #1c1725;
+    --line: #2f2640;
+    --text: #f0edf5;
+    --muted: #8b809e;
+    --brand-pink: #c61a8c;
+    --brand-purple: #461c68;
+    --bebop-yellow: #e3b23c;
+    --radius: 18px;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background:
+        radial-gradient(circle at 15% 0%, rgba(70,28,104,.4), transparent 45%),
+        radial-gradient(circle at 85% 100%, rgba(198,26,140,.1), transparent 40%),
+        var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    line-height: 1.55;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .03;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+
+/* ——— ШАПКА ——— */
+header {
+    background:
+        radial-gradient(circle at 15% 0%, rgba(70,28,104,.4), transparent 45%),
+        radial-gradient(circle at 85% 100%, rgba(198,26,140,.1), transparent 40%),
+        var(--bg);
+    padding: 16px 24px; 
+    width: 100%;
+    position: fixed; /* Шапка зафиксирована */
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line); /* Вернули линию под шапкой */
+}
+
+.topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.brand-logo {
+    height: 36px; /* Чуть уменьшили, чтобы шапка не была гигантской */
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.brand-mark {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: .08em;
+    color: var(--text);
+    line-height: 1;
+}
+
+.brand-sub {
+    font-size: .7rem;
+    color: var(--muted);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: var(--brand-pink);
+}
+
+.nav-menu a.disabled-link {
+    cursor: default;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ——— СОЦИАЛЬНЫЕ СЕТИ ——— */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent; 
+    background: transparent;
+}
+
+.social-btn svg, 
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover svg,
+.social-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* VK */
+.social-btn.vk {
+    background: rgba(0, 119, 255, 0.1);
+    border-color: rgba(0, 119, 255, 0.3);
+    color: #0077FF;
+    fill: #0077FF;
+}
+.social-btn.vk:hover {
+    background: rgba(0, 119, 255, 0.2);
+    border-color: #0077FF;
+    box-shadow: 0 0 15px rgba(0, 119, 255, 0.4);
+}
+
+/* Telegram */
+.social-btn.tg {
+    background: rgba(0, 136, 204, 0.1);
+    border-color: rgba(0, 136, 204, 0.3);
+    color: #0088CC;
+    fill: #0088CC;
+}
+.social-btn.tg:hover {
+    background: rgba(0, 136, 204, 0.2);
+    border-color: #0088CC;
+    box-shadow: 0 0 15px rgba(0, 136, 204, 0.4);
+}
+
+/* Discord */
+.social-btn.ds {
+    background: rgba(88, 101, 242, 0.1);
+    border-color: rgba(88, 101, 242, 0.3);
+    color: #5865F2;
+    fill: #5865F2;
+}
+.social-btn.ds:hover {
+    background: rgba(88, 101, 242, 0.2);
+    border-color: #5865F2;
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+}
+
+/* Boosty */
+.social-btn.boosty {
+    background: rgba(241, 95, 44, 0.1);
+    border-color: rgba(241, 95, 44, 0.3);
+}
+.social-btn.boosty:hover {
+    background: rgba(241, 95, 44, 0.2);
+    border-color: #F15F2C;
+    box-shadow: 0 0 15px rgba(241, 95, 44, 0.4);
+}
+
+/* ——— КНОПКИ ——— */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background: var(--brand-pink);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(198,26,140,.3);
+}
+
+.btn-primary:hover {
+    background: #e01da0;
+    box-shadow: 0 0 25px rgba(198,26,140,.5);
+    transform: translateY(-2px);
+}
+
+.btn-disabled {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--muted);
+    border-color: var(--line);
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* ——— ПОДВАЛ ——— */
+footer {
+    margin-top: auto;
+    padding: 36px 24px 32px;
+    border-top: 1px solid var(--line);
+    max-width: 1040px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: .72rem;
+    color: var(--muted);
+}
+
+footer .tagline {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    letter-spacing: .1em;
+    color: var(--bebop-yellow);
+    font-size: .95rem;
+}
+
+/* Общие медиа-запросы */
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    footer { flex-direction: column; }
+}
