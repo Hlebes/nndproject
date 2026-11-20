@@ -1,19 +1,40 @@
-console.log('%c[Серии] episodes.js загружен', 'color:#e0a43b;font-weight:bold');
-
-// Диагностика: ловим ВСЕ клики на странице и показываем, куда они попали
-document.addEventListener('click', e => {
-  const btn = e.target.closest('.ep-list button');
-  if (!btn) {
-    console.log('[Серии] Клик мимо кнопок, попал в:', e.target);
-  }
-}, true);
+window.__epLoaded = true;
+console.log('episodes.js загружен');
 
 function initEpisodes() {
-  const list = document.querySelector('.ep-list');
-  const panels = Array.from(document.querySelectorAll('.ep-panel'));
-  const tabs = list ? Array.from(list.querySelectorAll('button')) : [];
+const list = document.querySelector('.ep-list');
+const panels = Array.from(document.querySelectorAll('.ep-panel'));
+if (!list || !panels.length) {
+    console.warn('episodes.js: не найден .ep-list или .ep-panel');
+    return;
+}
+const tabs = Array.from(list.querySelectorAll('button'));
 
-  console.log(`[Серии] Найдено кнопок: ${tabs.length}, описаний: ${panels.length}`);
-  if (!list) return console.error('[Серии] Не найден элемент .ep-list');
-  if (!tabs.length) return console.error('[Серии] Внутри .ep-list нет <button>');
-  if (!panels.length) return console.error('[Серии] Не найдены элементы .ep-panel
+function select(index) {
+    tabs.forEach((t, i) => t.setAttribute('aria-selected', i === index ? 'true' : 'false'));
+    panels.forEach((p, i) => {
+    p.hidden = i !== index;
+    p.style.display = i === index ? '' : 'none'; // на случай, если CSS перебивает hidden
+    });
+}
+
+tabs.forEach((tab, i) => {
+    tab.type = 'button'; // чтобы кнопка не отправляла форму и не перезагружала страницу
+    tab.addEventListener('click', () => select(i));
+    tab.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const next = (i + (e.key === 'ArrowDown' ? 1 : -1) + tabs.length) % tabs.length;
+    tabs[next].focus();
+    select(next);
+    });
+});
+
+select(0);
+}
+
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', initEpisodes);
+} else {
+initEpisodes();
+}
