@@ -1,34 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const list = document.querySelector('.ep-list');
-    if (!list) return;
+console.log('%c[Серии] episodes.js загружен', 'color:#e0a43b;font-weight:bold');
 
-    const tabs = Array.from(list.querySelectorAll('[aria-controls]'));
+// Диагностика: ловим ВСЕ клики на странице и показываем, куда они попали
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.ep-list button');
+  if (!btn) {
+    console.log('[Серии] Клик мимо кнопок, попал в:', e.target);
+  }
+}, true);
 
-    function select(tab) {
-      tabs.forEach(t => {
-        t.setAttribute('aria-selected', 'false');
-        const p = document.getElementById(t.getAttribute('aria-controls'));
-        if (p) p.hidden = true;
-      });
-      tab.setAttribute('aria-selected', 'true');
-      const panel = document.getElementById(tab.getAttribute('aria-controls'));
-      if (panel) panel.hidden = false;
-    }
+function initEpisodes() {
+  const list = document.querySelector('.ep-list');
+  const panels = Array.from(document.querySelectorAll('.ep-panel'));
+  const tabs = list ? Array.from(list.querySelectorAll('button')) : [];
 
-    // Клик по любой кнопке списка
-    list.addEventListener('click', e => {
-      const tab = e.target.closest('[aria-controls]');
-      if (tab) select(tab);
-    });
-
-    // Переключение стрелками ↑/↓
-    list.addEventListener('keydown', e => {
-      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
-      const i = tabs.indexOf(document.activeElement);
-      if (i === -1) return;
-      e.preventDefault();
-      const next = tabs[(i + (e.key === 'ArrowDown' ? 1 : -1) + tabs.length) % tabs.length];
-      next.focus();
-      select(next);
-    });
-});
+  console.log(`[Серии] Найдено кнопок: ${tabs.length}, описаний: ${panels.length}`);
+  if (!list) return console.error('[Серии] Не найден элемент .ep-list');
+  if (!tabs.length) return console.error('[Серии] Внутри .ep-list нет <button>');
+  if (!panels.length) return console.error('[Серии] Не найдены элементы .ep-panel
