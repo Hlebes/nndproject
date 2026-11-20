@@ -142,72 +142,102 @@
             </div>
         </div>
     </section>
-    <section class="episodes">
-        <h2>Список серий</h2>
-        <p class="episodes__meta">12 эпизодов · нажмите на название, чтобы прочитать описание</p>
+    <!-- ===== Список серий ===== -->
+    <section class="ep-section" id="episodes" aria-labelledby="ep-title">
+    <h2 id="ep-title" class="ep-heading">Список серий</h2>
+    <p class="ep-subtitle">12 эпизодов · нажмите на название, чтобы прочитать описание</p>
 
-        <ol class="episodes__list">
-            <li><details>
-            <summary><span class="ep-num">01</span>Пёс и бензопила</summary>
-            <p>Денджи расплачивается с долгами отца перед якудзой, охотясь на демонов вместе с псом-демоном Почитой. Когда якудза его предают и убивают, Почита сливается с Денджи, и тот возвращается к жизни Человеком-бензопилой.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">02</span>Прибытие в Токио</summary>
-            <p>Таинственная Макима забирает Денджи в Токио, в Бюро общественной безопасности. Его первым напарником становится серьёзный Аки Хаякава, и они сразу не находят общего языка.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">03</span>Где же Мяуки?</summary>
-            <p>Новая напарница Денджи, демон-изверг Пауэр, просит помочь спасти её кота Мяуки из лап демона-летучей мыши. Спасательная операция оказывается совсем не тем, чем кажется.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">04</span>Спасение</summary>
-            <p>Денджи пытается выбраться из ловушки и сражается с демоном-летучей мышью. После этой миссии в квартире Аки становится заметно теснее.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">05</span>Демон Огнестрела</summary>
-            <p>Денджи узнаёт о Демоне Огнестрела — главной цели Аки. Отряд Химэно отправляют в отель за фрагментом его плоти, но здание оказывается не таким простым.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">06</span>Убить Денджи</summary>
-            <p>Отряд застрял на зацикленном этаже отеля, и демон Вечности требует отдать ему Денджи. Измотанные охотники начинают всерьёз думать, не согласиться ли.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">07</span>Вкус поцелуя</summary>
-            <p>Отдел отмечает пополнение. Денджи наконец получает свой первый поцелуй, но всё идёт совсем не так, как он мечтал.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">08</span>Выстрелы</summary>
-            <p>На охотников из Особого отдела нападают по всему городу. Отряд Аки и Химэно попадает в засаду, и для нескольких героев этот день становится последним.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">09</span>Из Киото</summary>
-            <p>После атаки Бюро несёт тяжёлые потери. Макима показывает, на что она способна, а выжившие охотники решают, остаться ли им в профессии.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">10</span>Синяки и ссадины</summary>
-            <p>Чтобы стать сильнее, Денджи и Пауэр попадают на изнурительные тренировки к ветерану Кисибэ. Аки тем временем ищет силу другим путём.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">11</span>Начало операции</summary>
-            <p>Бюро находит нападавших и начинает облаву. Охотники идут на штурм, чтобы добраться до Человека-катаны.</p>
-            </details></li>
-
-            <li><details>
-            <summary><span class="ep-num">12</span>Катана против бензопилы</summary>
-            <p>Решающий бой Денджи и Человека-катаны в поезде. Пора отомстить за погибших товарищей.</p>
-            </details></li>
+    <div class="ep-wrap">
+        <ol class="ep-list" role="tablist" aria-label="Эпизоды «Человека-бензопилы»">
+        <li><button class="ep-btn" role="tab" aria-selected="true" aria-controls="ep-1" id="tab-1"><span>01</span>Пёс и бензопила</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-2" id="tab-2"><span>02</span>Прибытие в Токио</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-3" id="tab-3"><span>03</span>Где же Мяуки?</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-4" id="tab-4"><span>04</span>Спасение</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-5" id="tab-5"><span>05</span>Демон Огнестрела</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-6" id="tab-6"><span>06</span>Убить Дэндзи</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-7" id="tab-7"><span>07</span>Вкус поцелуя</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-8" id="tab-8"><span>08</span>Выстрелы</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-9" id="tab-9"><span>09</span>Из Киото</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-10" id="tab-10"><span>10</span>Синяки и ссадины</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-11" id="tab-11"><span>11</span>Начало операции</button></li>
+        <li><button class="ep-btn" role="tab" aria-selected="false" aria-controls="ep-12" id="tab-12"><span>12</span>Катана против бензопилы</button></li>
         </ol>
-        </section>
+
+        <div class="ep-panels">
+        <article class="ep-panel" role="tabpanel" id="ep-1" aria-labelledby="tab-1">
+            <p class="ep-num">Серия 1 · Dog &amp; Chainsaw</p>
+            <h3>Пёс и бензопила</h3>
+            <p>Дэндзи расплачивается с долгами отца перед якудзой, охотясь на демонов вместе с псом-демоном Почитой. Когда якудза его предают и убивают, Почита сливается с Дэндзи, и тот возвращается к жизни Человеком-бензопилой.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-2" aria-labelledby="tab-2" hidden>
+            <p class="ep-num">Серия 2 · Arrival in Tokyo</p>
+            <h3>Прибытие в Токио</h3>
+            <p>Таинственная Макима забирает Дэндзи в Токио, в Бюро общественной безопасности. Его первым напарником становится серьёзный Аки Хаякава, и они сразу не находят общего языка.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-3" aria-labelledby="tab-3" hidden>
+            <p class="ep-num">Серия 3 · Meowy's Whereabouts</p>
+            <h3>Где же Мяуки?</h3>
+            <p>Новая напарница Дэндзи, демон-изверг Пауэр, просит помочь спасти её кота Мяуки из лап демона-летучей мыши. Спасательная операция оказывается совсем не тем, чем кажется.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-4" aria-labelledby="tab-4" hidden>
+            <p class="ep-num">Серия 4 · Rescue</p>
+            <h3>Спасение</h3>
+            <p>Дэндзи пытается выбраться из ловушки и сражается с демоном-летучей мышью. После этой миссии в квартире Аки становится заметно теснее.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-5" aria-labelledby="tab-5" hidden>
+            <p class="ep-num">Серия 5 · Gun Devil</p>
+            <h3>Демон Огнестрела</h3>
+            <p>Дэндзи узнаёт о Демоне Огнестрела — главной цели Аки. Отряд Химэно отправляют в отель за фрагментом его плоти, но здание оказывается не таким простым.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-6" aria-labelledby="tab-6" hidden>
+            <p class="ep-num">Серия 6 · Kill Denji</p>
+            <h3>Убить Дэндзи</h3>
+            <p>Отряд застрял на зацикленном этаже отеля, и демон Вечности требует отдать ему Дэндзи. Измотанные охотники начинают всерьёз думать, не согласиться ли.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-7" aria-labelledby="tab-7" hidden>
+            <p class="ep-num">Серия 7 · The Taste of a Kiss</p>
+            <h3>Вкус поцелуя</h3>
+            <p>Отдел отмечает пополнение. Дэндзи наконец получает свой первый поцелуй, но всё идёт совсем не так, как он мечтал.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-8" aria-labelledby="tab-8" hidden>
+            <p class="ep-num">Серия 8 · Gunfire</p>
+            <h3>Выстрелы</h3>
+            <p>На охотников из Особого отдела нападают по всему городу. Отряд Аки и Химэно попадает в засаду, и для нескольких героев этот день становится последним.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-9" aria-labelledby="tab-9" hidden>
+            <p class="ep-num">Серия 9 · From Kyoto</p>
+            <h3>Из Киото</h3>
+            <p>После атаки Бюро несёт тяжёлые потери. Макима показывает, на что она способна, а выжившие охотники решают, остаться ли им в профессии.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-10" aria-labelledby="tab-10" hidden>
+            <p class="ep-num">Серия 10 · Bruised &amp; Battered</p>
+            <h3>Синяки и ссадины</h3>
+            <p>Чтобы стать сильнее, Дэндзи и Пауэр попадают на изнурительные тренировки к ветерану Кисибэ. Аки тем временем ищет силу другим путём.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-11" aria-labelledby="tab-11" hidden>
+            <p class="ep-num">Серия 11 · Mission Start</p>
+            <h3>Начало операции</h3>
+            <p>Бюро находит нападавших и начинает облаву. Охотники идут на штурм, чтобы добраться до Человека-катаны.</p>
+        </article>
+
+        <article class="ep-panel" role="tabpanel" id="ep-12" aria-labelledby="tab-12" hidden>
+            <p class="ep-num">Серия 12 · Katana vs. Chainsaw</p>
+            <h3>Катана против бензопилы</h3>
+            <p>Решающий бой Дэндзи и Человека-катаны в поезде. Пора отомстить за погибших товарищей.</p>
+        </article>
+        </div>
+    </div>
+    </section>
 
     <footer>
         <div class="tagline">NoNameDUB Project</div>
