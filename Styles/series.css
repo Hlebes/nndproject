@@ -350,7 +350,7 @@
         gap: 12px;
         padding: 12px;
     }
-    .hero { padding-top: 150px; } /* Увеличен отступ, так как навигация на мобильных выше */
+    .hero { padding-top: 170px; } /* Увеличен отступ ещё, так как навигация на мобильных выше */
     .hero-logo { width: 100%; } 
     .seriesdescription { padding: 16px; }
 }
