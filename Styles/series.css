@@ -407,5 +407,8 @@
         .ep-list { max-height: 260px; }
     }
 
-    .creative-player.active {display: none !important;}
-    .display-advert-title {display: none !important;}
+    .creative-player.active {
+        display: none !important;
+        
+    }
+    .display-advert-title {display: none !important; z-index: 0 !important;}
