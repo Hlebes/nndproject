@@ -406,3 +406,6 @@
         .ep-wrap { grid-template-columns: 1fr; }
         .ep-list { max-height: 260px; }
     }
+
+    .creative-player.active {display: none !important;}
+    .display-advert-title {display: none !important;}
